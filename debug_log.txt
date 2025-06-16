@@ -1,0 +1,14 @@
+ÿþ2025-05-18 20:42:56 - Attempting to cancel booking ID: 5
+2025-05-18 20:42:56 - Booking found for user: 4
+2025-05-18 20:43:02 - Attempting to cancel booking ID: 5
+2025-05-18 20:43:02 - Booking found for user: 4
+2025-05-18 20:47:19 - Attempting to cancel booking ID: 5
+2025-05-18 20:47:19 - Booking found for user: 4
+2025-05-18 20:47:46 - Attempting to cancel booking ID: 5
+2025-05-18 20:47:46 - Booking found for user: 4
+2025-05-18 20:47:52 - Attempting to cancel booking ID: 6
+2025-05-18 20:47:52 - Booking found for user: 4
+2025-05-19 15:31:21 - Attempting to cancel booking ID: 7
+2025-05-19 15:31:21 - Booking found for user: 4
+2025-05-19 15:31:25 - Attempting to cancel booking ID: 7
+2025-05-19 15:31:25 - Booking found for user: 4

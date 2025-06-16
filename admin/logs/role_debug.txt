@@ -1,0 +1,1206 @@
+2025-05-18 21:23:05 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 21:23:05 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 21:23:05 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 21:23:05 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 21:23:14 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 21:23:14 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 21:23:14 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 21:23:14 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 21:23:19 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 21:23:19 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 21:23:19 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 21:23:19 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 21:23:20 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 21:28:17 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 21:28:33 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 21:28:33 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 21:28:33 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 21:28:33 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 21:28:34 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 21:28:35 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 21:28:35 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 21:28:35 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 21:28:35 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 21:32:40 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 21:32:40 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 21:33:18 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 21:33:18 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 21:33:38 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 21:33:38 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 21:40:52 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 21:40:52 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 21:40:52 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 21:40:52 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 21:48:31 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 21:48:31 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 21:48:49 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 21:48:49 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 21:48:56 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 21:48:56 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 21:49:42 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 21:49:42 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 21:49:48 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 21:49:48 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 21:49:49 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 21:49:49 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 21:49:50 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 21:49:50 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 21:49:50 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 21:49:50 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 21:50:19 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 21:50:19 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 21:53:28 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 21:53:28 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 21:55:36 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 21:55:38 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 21:55:38 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 21:55:40 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 21:55:40 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 21:55:40 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 21:55:40 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 21:55:40 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 21:55:41 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 21:55:41 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 21:55:41 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 21:58:18 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 21:58:18 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 21:58:18 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 21:58:18 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 22:04:11 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 22:04:11 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 22:04:11 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 22:04:12 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 22:04:12 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 22:09:58 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 22:09:58 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 22:19:51 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 22:20:24 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 22:25:12 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 22:25:20 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 22:25:20 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 22:25:20 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 22:25:20 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 22:28:08 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 22:28:14 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 22:28:16 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 22:32:53 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 22:32:54 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 22:32:58 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 22:33:00 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 22:33:03 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 22:33:03 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 22:33:03 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 22:33:03 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 22:33:05 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 22:33:07 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 22:33:10 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 22:33:11 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 22:33:12 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 22:35:39 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 22:35:43 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 22:35:47 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 22:35:49 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 22:35:51 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 22:35:52 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 22:35:54 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 22:35:56 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 22:36:00 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 22:36:00 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 22:36:00 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 22:36:00 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 22:36:02 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 22:36:03 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 22:36:03 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 22:36:03 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 22:36:05 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 22:36:26 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 22:36:32 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 22:37:16 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 22:37:17 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 22:37:24 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 22:37:28 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 22:40:09 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 22:40:13 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 22:40:13 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 22:40:13 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 22:40:13 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 22:40:15 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 22:40:15 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 22:40:15 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 22:40:15 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 22:40:16 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 22:40:17 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 22:40:17 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 22:40:18 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 22:40:20 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 22:40:21 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 22:40:22 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 22:41:02 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 22:45:19 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:04:41 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:04:42 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:04:48 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:04:48 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:04:49 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:04:51 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:04:51 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:04:52 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:04:57 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:05:00 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:05:06 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:05:08 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:08:35 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:08:40 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:08:40 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:08:41 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:08:41 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:08:44 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:08:45 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:08:45 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:08:47 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:08:48 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:11:26 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:11:37 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:11:38 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:11:39 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:11:40 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:11:46 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:11:49 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:12:10 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:12:25 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:12:26 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:12:43 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:12:43 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:12:45 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:12:48 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:13:45 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:14:17 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:20:42 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:20:43 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:20:46 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:20:47 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:20:48 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:20:49 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:20:51 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:20:53 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:20:54 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:20:55 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:20:56 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:20:57 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:20:58 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:20:58 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:20:59 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:20:59 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:20:59 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:20:59 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:20:59 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:23:59 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:24:13 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:24:14 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:24:15 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:24:15 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:24:16 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:24:16 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:24:17 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:24:18 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:24:19 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:24:19 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:24:20 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:24:21 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:24:22 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:24:22 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:24:23 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:24:24 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:24:24 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:24:24 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:24:24 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:24:37 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:24:38 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:24:38 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:24:39 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:24:51 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:24:52 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:24:53 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:24:54 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:24:56 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:24:56 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:24:56 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:24:56 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:24:56 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:24:57 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:24:57 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:24:57 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:27:04 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:27:04 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:27:04 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:27:04 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:27:06 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:27:07 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:27:07 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:27:07 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:27:07 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:27:08 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:27:09 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:27:09 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:27:09 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:27:09 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:27:25 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:27:26 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:27:26 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:27:26 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:27:26 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:27:27 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:27:41 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:27:41 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:27:42 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:27:53 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:27:58 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:29:28 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:29:30 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:29:30 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:29:30 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:29:30 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:29:32 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:29:33 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:29:33 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:29:33 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:29:33 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:30:18 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:30:19 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:30:19 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:30:19 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:30:19 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:30:22 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:30:22 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:30:22 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:30:22 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:30:24 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:30:25 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:30:25 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:30:25 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:30:25 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:30:28 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:31:44 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:31:45 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:31:45 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:31:45 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:31:45 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:33:03 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:33:14 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:33:14 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:33:14 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:33:14 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:33:15 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:33:15 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:33:15 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:33:16 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:33:17 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:33:17 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:33:18 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:33:18 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:33:19 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:33:20 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:35:30 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:35:30 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:35:30 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:35:31 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:36:39 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:36:39 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:36:46 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:36:48 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:36:48 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:36:48 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:36:49 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:36:49 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:36:49 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:36:49 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:37:51 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:37:51 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:37:51 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:37:51 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:37:52 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:37:53 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:37:53 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:38:30 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:38:30 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:38:30 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:38:30 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:38:31 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:38:31 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:38:55 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:38:55 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:38:59 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:38:59 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:39:18 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:39:18 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:39:20 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:39:22 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:39:22 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:39:23 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:39:57 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:39:57 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:39:58 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:39:58 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:39:59 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:39:59 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:40:01 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:40:01 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:40:02 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:40:02 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:40:11 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:40:14 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:40:14 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:40:14 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:40:15 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:40:15 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:40:16 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:40:16 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:40:17 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:40:18 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:40:19 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:40:19 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:40:19 - Checking role: admin
+SESSION user_role: admin
+2025-05-18 23:40:20 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 09:33:45 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 09:33:45 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 09:33:45 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 09:33:45 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 09:41:19 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 09:41:21 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 09:41:21 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 09:41:22 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 09:41:27 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 09:41:28 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 09:45:22 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 09:45:22 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 09:45:23 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 09:45:24 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 09:47:30 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 09:49:39 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 09:49:42 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 09:50:56 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 09:53:10 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 09:53:21 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 09:53:22 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 09:56:00 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 09:56:01 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 09:56:05 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 09:56:11 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 09:56:11 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 09:57:57 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 09:57:59 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 09:58:06 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 09:58:07 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 09:58:08 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 09:58:08 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 09:58:26 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:02:17 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:02:18 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:02:18 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:02:19 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:02:20 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:02:22 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:02:23 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:02:23 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:02:23 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:02:23 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:02:24 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:02:24 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:02:24 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:02:25 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:02:25 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:02:25 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:02:25 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:02:26 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:02:26 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:02:27 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:04:26 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:04:26 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:04:26 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:04:26 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:07:18 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:07:18 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:07:18 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:07:18 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:07:20 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:09:57 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:09:58 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:10:00 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:10:00 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:10:01 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:10:24 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:10:25 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:12:08 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:12:09 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:12:09 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:12:10 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:12:10 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:12:11 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:12:12 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:12:14 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:12:18 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:12:19 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:12:20 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:12:20 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:12:35 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:12:36 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:12:37 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:14:44 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:14:44 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:14:45 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:14:46 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:14:47 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:14:48 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:14:48 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:14:49 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:19:45 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:19:46 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:19:54 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:19:55 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:19:56 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:19:57 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:22:48 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:22:49 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:22:50 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:22:54 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:23:13 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:23:14 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:23:15 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:30:54 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:31:40 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:31:41 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:33:32 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:33:33 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:33:35 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:33:35 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:34:29 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:34:30 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:34:30 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:34:31 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:38:21 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:38:22 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:38:23 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:38:23 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:38:24 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:38:25 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:40:17 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:40:19 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:40:20 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:40:20 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:40:20 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:40:21 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:40:21 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:40:22 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:45:21 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:45:22 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:45:23 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:45:24 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:45:26 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:45:27 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:45:27 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:45:28 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:45:29 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:45:30 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:45:32 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:45:33 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:48:19 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:48:20 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:48:21 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:48:22 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:48:23 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:48:24 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:48:26 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:48:26 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:48:28 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:48:29 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:48:30 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:48:31 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:48:32 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:51:16 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:51:17 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:51:18 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:51:20 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:52:55 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:56:58 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:57:25 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:57:25 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:58:09 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:58:09 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:58:09 - Checking role: staff
+SESSION user_role: admin
+2025-05-19 10:58:09 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:58:40 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:58:40 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:58:40 - Checking role: staff
+SESSION user_role: admin
+2025-05-19 10:58:40 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:59:03 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:59:31 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 10:59:44 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 11:00:00 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 11:00:18 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 11:00:27 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 11:00:28 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 11:01:23 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 11:01:47 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 11:03:37 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 11:04:23 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 11:13:29 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 11:13:29 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 11:13:29 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 11:13:29 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 11:13:39 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 11:13:50 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 11:13:51 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 11:13:51 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 11:13:52 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 11:13:52 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 11:13:53 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 11:13:53 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 11:13:53 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 11:13:56 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 11:14:03 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 11:14:04 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 11:14:09 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 11:14:10 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 13:51:51 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 15:25:41 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 15:25:41 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 15:25:41 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 15:25:41 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 15:27:20 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 15:27:37 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 15:27:37 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 15:27:53 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 15:28:00 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 15:28:09 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 15:28:12 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 15:28:34 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 15:28:39 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 15:28:48 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 15:28:49 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 15:28:52 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 15:29:06 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 15:29:08 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 15:29:08 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 15:29:09 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 15:29:09 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 15:29:09 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 15:29:09 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 15:29:12 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 15:29:13 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 15:29:27 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 15:29:36 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 15:29:40 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 15:29:41 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 15:29:41 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 15:29:46 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 15:30:06 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 15:30:17 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 15:30:19 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 15:30:24 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 15:30:26 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 15:30:27 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 15:30:44 - Checking role: admin
+SESSION user_role: admin
+2025-05-19 15:30:50 - Checking role: admin
+SESSION user_role: admin

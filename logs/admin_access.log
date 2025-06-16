@@ -1,0 +1,1427 @@
+2025-05-18 19:24:09 - Admin page accessed
+Session data: Array
+(
+    [last_activity] => 1747596238
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+)
+
+isLoggedIn(): true
+Role: admin
+isAdmin(): true
+Request URI: /metro-rail/admin/test_admin.php
+
+2025-05-18 19:24:09 - Admin access granted
+
+2025-05-18 19:24:11 - Admin page accessed
+Session data: Array
+(
+    [last_activity] => 1747596238
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+)
+
+isLoggedIn(): true
+Role: admin
+isAdmin(): true
+Request URI: /metro-rail/admin/index.php
+
+2025-05-18 19:24:11 - Admin access granted
+
+2025-05-18 19:30:36 - Admin page accessed
+Session data: Array
+(
+    [last_activity] => 1747596238
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+)
+
+isLoggedIn(): true
+Role: admin
+isAdmin(): true
+Request URI: /metro-rail/admin/test_admin.php
+
+2025-05-18 19:30:36 - Admin access granted
+
+2025-05-18 20:03:47 - Admin page accessed
+Session data: Array
+(
+    [last_activity] => 1747598627
+)
+
+isLoggedIn(): false
+Role: undefined
+isAdmin(): false
+Request URI: /metro-rail/admin/test_admin.php
+
+2025-05-18 20:03:47 - Not logged in, redirecting to login page
+
+2025-05-18 21:23:05 - Admin page accessed
+Session data: Array
+(
+    [last_activity] => 1747603375
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+)
+
+isLoggedIn(): true
+Role: admin
+isAdmin(): true
+Request URI: /metro-rail/admin/index.php
+
+2025-05-18 21:23:05 - Admin access granted
+
+2025-05-18 21:23:14 - Admin page accessed
+Session data: Array
+(
+    [last_activity] => 1747603394
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+)
+
+isLoggedIn(): true
+Role: admin
+isAdmin(): true
+Request URI: /metro-rail/admin/
+
+2025-05-18 21:23:14 - Admin access granted
+
+2025-05-18 21:23:19 - Admin page accessed
+Session data: Array
+(
+    [last_activity] => 1747603398
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+)
+
+isLoggedIn(): true
+Role: admin
+isAdmin(): true
+Request URI: /metro-rail/admin/
+
+2025-05-18 21:23:19 - Admin access granted
+
+2025-05-18 21:28:33 - Admin page accessed
+Session data: Array
+(
+    [last_activity] => 1747603398
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+)
+
+isLoggedIn(): true
+Role: admin
+isAdmin(): true
+Request URI: /metro-rail/admin/index.php
+
+2025-05-18 21:28:33 - Admin access granted
+
+2025-05-18 21:28:35 - Admin page accessed
+Session data: Array
+(
+    [last_activity] => 1747603398
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+)
+
+isLoggedIn(): true
+Role: admin
+isAdmin(): true
+Request URI: /metro-rail/admin/index.php
+
+2025-05-18 21:28:35 - Admin access granted
+
+2025-05-18 21:32:40 - Admin page accessed
+Session data: Array
+(
+    [last_activity] => 1747603398
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+)
+
+isLoggedIn(): true
+Role: admin
+isAdmin(): true
+Request URI: /metro-rail/admin/trains.php
+
+2025-05-18 21:32:40 - Admin access granted
+
+2025-05-18 21:33:18 - Admin page accessed
+Session data: Array
+(
+    [last_activity] => 1747603398
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+)
+
+isLoggedIn(): true
+Role: admin
+isAdmin(): true
+Request URI: /metro-rail/admin/trains.php
+
+2025-05-18 21:33:18 - Admin access granted
+
+2025-05-18 21:33:38 - Admin page accessed
+Session data: Array
+(
+    [last_activity] => 1747603398
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+)
+
+isLoggedIn(): true
+Role: admin
+isAdmin(): true
+Request URI: /metro-rail/admin/trains.php
+
+2025-05-18 21:33:38 - Admin access granted
+
+2025-05-18 21:40:52 - Admin page accessed
+Session data: Array
+(
+    [last_activity] => 1747603398
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+)
+
+isLoggedIn(): true
+Role: admin
+isAdmin(): true
+Request URI: /metro-rail/admin/index.php
+
+2025-05-18 21:40:52 - Admin access granted
+
+2025-05-18 21:48:31 - Admin page accessed
+Session data: Array
+(
+    [last_activity] => 1747603398
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+)
+
+isLoggedIn(): true
+Role: admin
+isAdmin(): true
+Request URI: /metro-rail/admin/trains.php
+
+2025-05-18 21:48:31 - Admin access granted
+
+2025-05-18 21:48:49 - Admin page accessed
+Session data: Array
+(
+    [last_activity] => 1747603398
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+)
+
+isLoggedIn(): true
+Role: admin
+isAdmin(): true
+Request URI: /metro-rail/admin/trains.php
+
+2025-05-18 21:48:49 - Admin access granted
+
+2025-05-18 21:48:56 - Admin page accessed
+Session data: Array
+(
+    [last_activity] => 1747603398
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+)
+
+isLoggedIn(): true
+Role: admin
+isAdmin(): true
+Request URI: /metro-rail/admin/trains.php
+
+2025-05-18 21:48:56 - Admin access granted
+
+2025-05-18 21:49:42 - Admin page accessed
+Session data: Array
+(
+    [last_activity] => 1747603398
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+)
+
+isLoggedIn(): true
+Role: admin
+isAdmin(): true
+Request URI: /metro-rail/admin/trains.php
+
+2025-05-18 21:49:42 - Admin access granted
+
+2025-05-18 21:49:48 - Admin page accessed
+Session data: Array
+(
+    [last_activity] => 1747603398
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+)
+
+isLoggedIn(): true
+Role: admin
+isAdmin(): true
+Request URI: /metro-rail/admin/trains.php
+
+2025-05-18 21:49:48 - Admin access granted
+
+2025-05-18 21:49:49 - Admin page accessed
+Session data: Array
+(
+    [last_activity] => 1747603398
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+)
+
+isLoggedIn(): true
+Role: admin
+isAdmin(): true
+Request URI: /metro-rail/admin/trains.php
+
+2025-05-18 21:49:49 - Admin access granted
+
+2025-05-18 21:49:50 - Admin page accessed
+Session data: Array
+(
+    [last_activity] => 1747603398
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+)
+
+isLoggedIn(): true
+Role: admin
+isAdmin(): true
+Request URI: /metro-rail/admin/trains.php
+
+2025-05-18 21:49:50 - Admin access granted
+
+2025-05-18 21:49:50 - Admin page accessed
+Session data: Array
+(
+    [last_activity] => 1747603398
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+)
+
+isLoggedIn(): true
+Role: admin
+isAdmin(): true
+Request URI: /metro-rail/admin/trains.php
+
+2025-05-18 21:49:50 - Admin access granted
+
+2025-05-18 21:50:19 - Admin page accessed
+Session data: Array
+(
+    [last_activity] => 1747603398
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+)
+
+isLoggedIn(): true
+Role: admin
+isAdmin(): true
+Request URI: /metro-rail/admin/trains.php
+
+2025-05-18 21:50:19 - Admin access granted
+
+2025-05-18 21:53:28 - Admin page accessed
+Session data: Array
+(
+    [last_activity] => 1747603398
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+)
+
+isLoggedIn(): true
+Role: admin
+isAdmin(): true
+Request URI: /metro-rail/admin/trains.php
+
+2025-05-18 21:53:28 - Admin access granted
+
+2025-05-18 21:55:38 - Admin page accessed
+Session data: Array
+(
+    [last_activity] => 1747603398
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+)
+
+isLoggedIn(): true
+Role: admin
+isAdmin(): true
+Request URI: /metro-rail/admin/trains.php
+
+2025-05-18 21:55:38 - Admin access granted
+
+2025-05-18 21:55:40 - Admin page accessed
+Session data: Array
+(
+    [last_activity] => 1747603398
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+)
+
+isLoggedIn(): true
+Role: admin
+isAdmin(): true
+Request URI: /metro-rail/admin/index.php
+
+2025-05-18 21:55:40 - Admin access granted
+
+2025-05-18 21:55:41 - Admin page accessed
+Session data: Array
+(
+    [last_activity] => 1747603398
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+)
+
+isLoggedIn(): true
+Role: admin
+isAdmin(): true
+Request URI: /metro-rail/admin/trains.php
+
+2025-05-18 21:55:41 - Admin access granted
+
+2025-05-18 21:58:18 - Admin page accessed
+Session data: Array
+(
+    [last_activity] => 1747605494
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+)
+
+isLoggedIn(): true
+Role: admin
+isAdmin(): true
+Request URI: /metro-rail/admin/
+
+2025-05-18 21:58:18 - Admin access granted
+
+2025-05-18 22:04:11 - Admin page accessed
+Session data: Array
+(
+    [last_activity] => 1747605494
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+)
+
+isLoggedIn(): true
+Role: admin
+isAdmin(): true
+Request URI: /metro-rail/admin/trains.php
+
+2025-05-18 22:04:11 - Admin access granted
+
+2025-05-18 22:04:12 - Admin page accessed
+Session data: Array
+(
+    [last_activity] => 1747605494
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+)
+
+isLoggedIn(): true
+Role: admin
+isAdmin(): true
+Request URI: /metro-rail/admin/trains.php
+
+2025-05-18 22:04:12 - Admin access granted
+
+2025-05-18 22:09:58 - Admin page accessed
+Session data: Array
+(
+    [last_activity] => 1747605494
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+)
+
+isLoggedIn(): true
+Role: admin
+isAdmin(): true
+Request URI: /metro-rail/admin/trains.php
+
+2025-05-18 22:09:58 - Admin access granted
+
+2025-05-18 22:25:20 - Admin page accessed
+Session data: Array
+(
+    [last_activity] => 1747605494
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+)
+
+isLoggedIn(): true
+Role: admin
+isAdmin(): true
+Request URI: /metro-rail/admin/index.php
+
+2025-05-18 22:25:20 - Admin access granted
+
+2025-05-18 22:33:03 - Admin page accessed
+Session data: Array
+(
+    [last_activity] => 1747605494
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+)
+
+isLoggedIn(): true
+Role: admin
+isAdmin(): true
+Request URI: /metro-rail/admin/index.php
+
+2025-05-18 22:33:03 - Admin access granted
+
+2025-05-18 22:36:00 - Admin page accessed
+Session data: Array
+(
+    [last_activity] => 1747605494
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+)
+
+isLoggedIn(): true
+Role: admin
+isAdmin(): true
+Request URI: /metro-rail/admin/index.php
+
+2025-05-18 22:36:00 - Admin access granted
+
+2025-05-18 22:36:03 - Admin page accessed
+Session data: Array
+(
+    [last_activity] => 1747605494
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+)
+
+isLoggedIn(): true
+Role: admin
+isAdmin(): true
+Request URI: /metro-rail/admin/trains.php
+
+2025-05-18 22:36:03 - Admin access granted
+
+2025-05-18 22:40:13 - Admin page accessed
+Session data: Array
+(
+    [last_activity] => 1747605494
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+)
+
+isLoggedIn(): true
+Role: admin
+isAdmin(): true
+Request URI: /metro-rail/admin/index.php
+
+2025-05-18 22:40:13 - Admin access granted
+
+2025-05-18 22:40:15 - Admin page accessed
+Session data: Array
+(
+    [last_activity] => 1747605494
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+)
+
+isLoggedIn(): true
+Role: admin
+isAdmin(): true
+Request URI: /metro-rail/admin/index.php
+
+2025-05-18 22:40:15 - Admin access granted
+
+2025-05-18 22:40:17 - Admin page accessed
+Session data: Array
+(
+    [last_activity] => 1747605494
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+)
+
+isLoggedIn(): true
+Role: admin
+isAdmin(): true
+Request URI: /metro-rail/admin/trains.php
+
+2025-05-18 22:40:17 - Admin access granted
+
+2025-05-18 23:04:51 - Admin page accessed
+Session data: Array
+(
+    [last_activity] => 1747605494
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+)
+
+isLoggedIn(): true
+Role: admin
+isAdmin(): true
+Request URI: /metro-rail/admin/trains.php
+
+2025-05-18 23:04:51 - Admin access granted
+
+2025-05-18 23:20:58 - Admin page accessed
+Session data: Array
+(
+    [last_activity] => 1747605494
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+)
+
+isLoggedIn(): true
+Role: admin
+isAdmin(): true
+Request URI: /metro-rail/admin/trains.php
+
+2025-05-18 23:20:58 - Admin access granted
+
+2025-05-18 23:20:59 - Admin page accessed
+Session data: Array
+(
+    [last_activity] => 1747605494
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+)
+
+isLoggedIn(): true
+Role: admin
+isAdmin(): true
+Request URI: /metro-rail/admin/index.php
+
+2025-05-18 23:20:59 - Admin access granted
+
+2025-05-18 23:24:22 - Admin page accessed
+Session data: Array
+(
+    [last_activity] => 1747605494
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+)
+
+isLoggedIn(): true
+Role: admin
+isAdmin(): true
+Request URI: /metro-rail/admin/trains.php
+
+2025-05-18 23:24:22 - Admin access granted
+
+2025-05-18 23:24:24 - Admin page accessed
+Session data: Array
+(
+    [last_activity] => 1747605494
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+)
+
+isLoggedIn(): true
+Role: admin
+isAdmin(): true
+Request URI: /metro-rail/admin/index.php
+
+2025-05-18 23:24:24 - Admin access granted
+
+2025-05-18 23:24:38 - Admin page accessed
+Session data: Array
+(
+    [last_activity] => 1747605494
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+)
+
+isLoggedIn(): true
+Role: admin
+isAdmin(): true
+Request URI: /metro-rail/admin/trains.php
+
+2025-05-18 23:24:38 - Admin access granted
+
+2025-05-18 23:24:56 - Admin page accessed
+Session data: Array
+(
+    [last_activity] => 1747605494
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+)
+
+isLoggedIn(): true
+Role: admin
+isAdmin(): true
+Request URI: /metro-rail/admin/index.php
+
+2025-05-18 23:24:56 - Admin access granted
+
+2025-05-18 23:24:57 - Admin page accessed
+Session data: Array
+(
+    [last_activity] => 1747605494
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+)
+
+isLoggedIn(): true
+Role: admin
+isAdmin(): true
+Request URI: /metro-rail/admin/trains.php
+
+2025-05-18 23:24:57 - Admin access granted
+
+2025-05-18 23:26:11 - Admin page accessed
+Session data: Array
+(
+    [last_activity] => 1747610736
+)
+
+isLoggedIn(): false
+Role: undefined
+isAdmin(): false
+Request URI: /metro-rail/admin/trains.php
+
+2025-05-18 23:26:11 - Not logged in, redirecting to login page
+
+2025-05-18 23:27:04 - Admin page accessed
+Session data: Array
+(
+    [last_activity] => 1747610822
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+)
+
+isLoggedIn(): true
+Role: admin
+isAdmin(): true
+Request URI: /metro-rail/admin/index.php
+
+2025-05-18 23:27:04 - Admin access granted
+
+2025-05-18 23:27:07 - Admin page accessed
+Session data: Array
+(
+    [last_activity] => 1747610822
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+)
+
+isLoggedIn(): true
+Role: admin
+isAdmin(): true
+Request URI: /metro-rail/admin/index.php
+
+2025-05-18 23:27:07 - Admin access granted
+
+2025-05-18 23:27:09 - Admin page accessed
+Session data: Array
+(
+    [last_activity] => 1747610822
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+)
+
+isLoggedIn(): true
+Role: admin
+isAdmin(): true
+Request URI: /metro-rail/admin/index.php
+
+2025-05-18 23:27:09 - Admin access granted
+
+2025-05-18 23:27:26 - Admin page accessed
+Session data: Array
+(
+    [last_activity] => 1747610822
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+)
+
+isLoggedIn(): true
+Role: admin
+isAdmin(): true
+Request URI: /metro-rail/admin/index.php
+
+2025-05-18 23:27:26 - Admin access granted
+
+2025-05-18 23:27:41 - Admin page accessed
+Session data: Array
+(
+    [last_activity] => 1747610822
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+)
+
+isLoggedIn(): true
+Role: admin
+isAdmin(): true
+Request URI: /metro-rail/admin/trains.php
+
+2025-05-18 23:27:41 - Admin access granted
+
+2025-05-18 23:29:30 - Admin page accessed
+Session data: Array
+(
+    [last_activity] => 1747610822
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+)
+
+isLoggedIn(): true
+Role: admin
+isAdmin(): true
+Request URI: /metro-rail/admin/index.php
+
+2025-05-18 23:29:30 - Admin access granted
+
+2025-05-18 23:29:33 - Admin page accessed
+Session data: Array
+(
+    [last_activity] => 1747610822
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+)
+
+isLoggedIn(): true
+Role: admin
+isAdmin(): true
+Request URI: /metro-rail/admin/index.php
+
+2025-05-18 23:29:33 - Admin access granted
+
+2025-05-18 23:30:19 - Admin page accessed
+Session data: Array
+(
+    [last_activity] => 1747610822
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+)
+
+isLoggedIn(): true
+Role: admin
+isAdmin(): true
+Request URI: /metro-rail/admin/index.php
+
+2025-05-18 23:30:19 - Admin access granted
+
+2025-05-18 23:30:22 - Admin page accessed
+Session data: Array
+(
+    [last_activity] => 1747610822
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+)
+
+isLoggedIn(): true
+Role: admin
+isAdmin(): true
+Request URI: /metro-rail/admin/index.php
+
+2025-05-18 23:30:22 - Admin access granted
+
+2025-05-18 23:30:25 - Admin page accessed
+Session data: Array
+(
+    [last_activity] => 1747610822
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+)
+
+isLoggedIn(): true
+Role: admin
+isAdmin(): true
+Request URI: /metro-rail/admin/index.php
+
+2025-05-18 23:30:25 - Admin access granted
+
+2025-05-18 23:31:45 - Admin page accessed
+Session data: Array
+(
+    [last_activity] => 1747610822
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+)
+
+isLoggedIn(): true
+Role: admin
+isAdmin(): true
+Request URI: /metro-rail/admin/index.php
+
+2025-05-18 23:31:45 - Admin access granted
+
+2025-05-18 23:33:14 - Admin page accessed
+Session data: Array
+(
+    [last_activity] => 1747610822
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+)
+
+isLoggedIn(): true
+Role: admin
+isAdmin(): true
+Request URI: /metro-rail/admin/index.php
+
+2025-05-18 23:33:14 - Admin access granted
+
+2025-05-18 23:33:15 - Admin page accessed
+Session data: Array
+(
+    [last_activity] => 1747610822
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+)
+
+isLoggedIn(): true
+Role: admin
+isAdmin(): true
+Request URI: /metro-rail/admin/trains.php
+
+2025-05-18 23:33:15 - Admin access granted
+
+2025-05-18 23:36:39 - Admin page accessed
+Session data: Array
+(
+    [last_activity] => 1747610822
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+)
+
+isLoggedIn(): true
+Role: admin
+isAdmin(): true
+Request URI: /metro-rail/admin/trains.php
+
+2025-05-18 23:36:39 - Admin access granted
+
+2025-05-18 23:36:48 - Admin page accessed
+Session data: Array
+(
+    [last_activity] => 1747610822
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+)
+
+isLoggedIn(): true
+Role: admin
+isAdmin(): true
+Request URI: /metro-rail/admin/trains.php
+
+2025-05-18 23:36:48 - Admin access granted
+
+2025-05-18 23:36:49 - Admin page accessed
+Session data: Array
+(
+    [last_activity] => 1747610822
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+)
+
+isLoggedIn(): true
+Role: admin
+isAdmin(): true
+Request URI: /metro-rail/admin/index.php
+
+2025-05-18 23:36:49 - Admin access granted
+
+2025-05-18 23:37:51 - Admin page accessed
+Session data: Array
+(
+    [last_activity] => 1747610822
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+)
+
+isLoggedIn(): true
+Role: admin
+isAdmin(): true
+Request URI: /metro-rail/admin/index.php
+
+2025-05-18 23:37:51 - Admin access granted
+
+2025-05-18 23:37:53 - Admin page accessed
+Session data: Array
+(
+    [last_activity] => 1747610822
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+)
+
+isLoggedIn(): true
+Role: admin
+isAdmin(): true
+Request URI: /metro-rail/admin/trains.php
+
+2025-05-18 23:37:53 - Admin access granted
+
+2025-05-18 23:38:30 - Admin page accessed
+Session data: Array
+(
+    [last_activity] => 1747610822
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+)
+
+isLoggedIn(): true
+Role: admin
+isAdmin(): true
+Request URI: /metro-rail/admin/trains.php
+
+2025-05-18 23:38:30 - Admin access granted
+
+2025-05-18 23:38:30 - Admin page accessed
+Session data: Array
+(
+    [last_activity] => 1747610822
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+)
+
+isLoggedIn(): true
+Role: admin
+isAdmin(): true
+Request URI: /metro-rail/admin/trains.php
+
+2025-05-18 23:38:30 - Admin access granted
+
+2025-05-18 23:38:31 - Admin page accessed
+Session data: Array
+(
+    [last_activity] => 1747610822
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+)
+
+isLoggedIn(): true
+Role: admin
+isAdmin(): true
+Request URI: /metro-rail/admin/trains.php
+
+2025-05-18 23:38:31 - Admin access granted
+
+2025-05-18 23:38:55 - Admin page accessed
+Session data: Array
+(
+    [last_activity] => 1747610822
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+)
+
+isLoggedIn(): true
+Role: admin
+isAdmin(): true
+Request URI: /metro-rail/admin/trains.php
+
+2025-05-18 23:38:55 - Admin access granted
+
+2025-05-18 23:38:59 - Admin page accessed
+Session data: Array
+(
+    [last_activity] => 1747610822
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+)
+
+isLoggedIn(): true
+Role: admin
+isAdmin(): true
+Request URI: /metro-rail/admin/trains.php
+
+2025-05-18 23:38:59 - Admin access granted
+
+2025-05-18 23:39:18 - Admin page accessed
+Session data: Array
+(
+    [last_activity] => 1747610822
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+)
+
+isLoggedIn(): true
+Role: admin
+isAdmin(): true
+Request URI: /metro-rail/admin/trains.php
+
+2025-05-18 23:39:18 - Admin access granted
+
+2025-05-18 23:39:22 - Admin page accessed
+Session data: Array
+(
+    [last_activity] => 1747610822
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+)
+
+isLoggedIn(): true
+Role: admin
+isAdmin(): true
+Request URI: /metro-rail/admin/trains.php
+
+2025-05-18 23:39:22 - Admin access granted
+
+2025-05-18 23:39:57 - Admin page accessed
+Session data: Array
+(
+    [last_activity] => 1747610822
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+)
+
+isLoggedIn(): true
+Role: admin
+isAdmin(): true
+Request URI: /metro-rail/admin/trains.php
+
+2025-05-18 23:39:57 - Admin access granted
+
+2025-05-18 23:40:14 - Admin page accessed
+Session data: Array
+(
+    [last_activity] => 1747610822
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+)
+
+isLoggedIn(): true
+Role: admin
+isAdmin(): true
+Request URI: /metro-rail/admin/trains.php
+
+2025-05-18 23:40:14 - Admin access granted
+
+2025-05-19 09:33:45 - Admin page accessed
+Session data: Array
+(
+    [last_activity] => 1747647225
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+)
+
+isLoggedIn(): true
+Role: admin
+isAdmin(): true
+Request URI: /metro-rail/admin/
+
+2025-05-19 09:33:45 - Admin access granted
+
+2025-05-19 09:41:21 - Admin page accessed
+Session data: Array
+(
+    [last_activity] => 1747647225
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+)
+
+isLoggedIn(): true
+Role: admin
+isAdmin(): true
+Request URI: /metro-rail/admin/trains.php
+
+2025-05-19 09:41:21 - Admin access granted
+
+2025-05-19 10:02:23 - Admin page accessed
+Session data: Array
+(
+    [last_activity] => 1747647225
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+    [flash_messages] => Array
+        (
+        )
+
+)
+
+isLoggedIn(): true
+Role: admin
+isAdmin(): true
+Request URI: /metro-rail/admin/index.php
+
+2025-05-19 10:02:23 - Admin access granted
+
+2025-05-19 10:02:24 - Admin page accessed
+Session data: Array
+(
+    [last_activity] => 1747647225
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+    [flash_messages] => Array
+        (
+        )
+
+)
+
+isLoggedIn(): true
+Role: admin
+isAdmin(): true
+Request URI: /metro-rail/admin/trains.php
+
+2025-05-19 10:02:24 - Admin access granted
+
+2025-05-19 10:02:25 - Admin page accessed
+Session data: Array
+(
+    [last_activity] => 1747647225
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+    [flash_messages] => Array
+        (
+        )
+
+)
+
+isLoggedIn(): true
+Role: admin
+isAdmin(): true
+Request URI: /metro-rail/admin/index.php
+
+2025-05-19 10:02:25 - Admin access granted
+
+2025-05-19 10:04:26 - Admin page accessed
+Session data: Array
+(
+    [last_activity] => 1747649064
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+    [flash_messages] => Array
+        (
+        )
+
+)
+
+isLoggedIn(): true
+Role: admin
+isAdmin(): true
+Request URI: /metro-rail/admin/
+
+2025-05-19 10:04:26 - Admin access granted
+
+2025-05-19 10:07:18 - Admin page accessed
+Session data: Array
+(
+    [last_activity] => 1747649072
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+    [flash_messages] => Array
+        (
+        )
+
+)
+
+isLoggedIn(): true
+Role: admin
+isAdmin(): true
+Request URI: /metro-rail/admin/
+
+2025-05-19 10:07:18 - Admin access granted
+
+2025-05-19 11:13:29 - Admin page accessed
+Session data: Array
+(
+    [last_activity] => 1747652320
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+    [flash_messages] => Array
+        (
+        )
+
+)
+
+isLoggedIn(): true
+Role: admin
+isAdmin(): true
+Request URI: /metro-rail/admin/index.php
+
+2025-05-19 11:13:29 - Admin access granted
+
+2025-05-19 15:25:41 - Admin page accessed
+Session data: Array
+(
+    [last_activity] => 1747668341
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+)
+
+isLoggedIn(): true
+Role: admin
+isAdmin(): true
+Request URI: /metro-rail/admin/
+
+2025-05-19 15:25:41 - Admin access granted
+
+2025-05-19 15:27:37 - Admin page accessed
+Session data: Array
+(
+    [last_activity] => 1747668341
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+)
+
+isLoggedIn(): true
+Role: admin
+isAdmin(): true
+Request URI: /metro-rail/admin/trains.php
+
+2025-05-19 15:27:37 - Admin access granted
+

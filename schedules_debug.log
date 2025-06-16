@@ -1,0 +1,363 @@
+2025-05-18 16:34:35 - Schedule query
+Query: 
+    SELECT 
+        s.id,
+        r.name AS route_name,
+        r.code AS route_code,
+        t.name AS train_name,
+        t.train_number,
+        s.departure_time,
+        s.days
+    FROM 
+        schedules s
+    JOIN 
+        routes r ON s.route_id = r.id
+    JOIN 
+        trains t ON s.train_id = t.id
+    WHERE 
+        s.status = 'active'
+ AND FIND_IN_SET(?, s.days) > 0 ORDER BY s.departure_time
+Params: Array
+(
+    [0] => 7
+)
+
+2025-05-18 16:34:51 - Schedule query
+Query: 
+    SELECT 
+        s.id,
+        r.name AS route_name,
+        r.code AS route_code,
+        t.name AS train_name,
+        t.train_number,
+        s.departure_time,
+        s.days
+    FROM 
+        schedules s
+    JOIN 
+        routes r ON s.route_id = r.id
+    JOIN 
+        trains t ON s.train_id = t.id
+    WHERE 
+        s.status = 'active'
+ AND s.id IN (
+        SELECT schedule_id FROM schedule_stations WHERE station_id = ?
+    ) AND FIND_IN_SET(?, s.days) > 0 ORDER BY s.departure_time
+Params: Array
+(
+    [0] => 6
+    [1] => 7
+)
+
+2025-05-18 16:34:56 - Schedule query
+Query: 
+    SELECT 
+        s.id,
+        r.name AS route_name,
+        r.code AS route_code,
+        t.name AS train_name,
+        t.train_number,
+        s.departure_time,
+        s.days
+    FROM 
+        schedules s
+    JOIN 
+        routes r ON s.route_id = r.id
+    JOIN 
+        trains t ON s.train_id = t.id
+    WHERE 
+        s.status = 'active'
+ AND FIND_IN_SET(?, s.days) > 0 ORDER BY s.departure_time
+Params: Array
+(
+    [0] => 7
+)
+
+2025-05-18 16:36:18 - Schedule query
+Query: 
+    SELECT 
+        s.id,
+        r.name AS route_name,
+        r.code AS route_code,
+        t.name AS train_name,
+        t.train_number,
+        s.departure_time,
+        s.days
+    FROM 
+        schedules s
+    JOIN 
+        routes r ON s.route_id = r.id
+    JOIN 
+        trains t ON s.train_id = t.id
+    WHERE 
+        s.status = 'active'
+ AND FIND_IN_SET(?, s.days) > 0 ORDER BY s.departure_time
+Params: Array
+(
+    [0] => 7
+)
+
+2025-05-18 16:36:21 - Schedule query
+Query: 
+    SELECT 
+        s.id,
+        r.name AS route_name,
+        r.code AS route_code,
+        t.name AS train_name,
+        t.train_number,
+        s.departure_time,
+        s.days
+    FROM 
+        schedules s
+    JOIN 
+        routes r ON s.route_id = r.id
+    JOIN 
+        trains t ON s.train_id = t.id
+    WHERE 
+        s.status = 'active'
+ AND FIND_IN_SET(?, s.days) > 0 ORDER BY s.departure_time
+Params: Array
+(
+    [0] => 7
+)
+
+2025-05-18 16:39:47 - Schedule query
+Query: 
+    SELECT 
+        s.id,
+        r.name AS route_name,
+        r.code AS route_code,
+        t.name AS train_name,
+        t.train_number,
+        s.departure_time,
+        s.days
+    FROM 
+        schedules s
+    JOIN 
+        routes r ON s.route_id = r.id
+    JOIN 
+        trains t ON s.train_id = t.id
+    WHERE 
+        s.status = 'active'
+ AND FIND_IN_SET(?, s.days) > 0 ORDER BY s.departure_time
+Params: Array
+(
+    [0] => 7
+)
+
+2025-05-18 16:46:06 - Schedule query
+Query: 
+    SELECT 
+        s.id,
+        r.name AS route_name,
+        r.code AS route_code,
+        t.name AS train_name,
+        t.train_number,
+        s.departure_time,
+        s.days
+    FROM 
+        schedules s
+    JOIN 
+        routes r ON s.route_id = r.id
+    JOIN 
+        trains t ON s.train_id = t.id
+    WHERE 
+        s.status = 'active'
+ AND FIND_IN_SET(?, s.days) > 0 ORDER BY s.departure_time
+Params: Array
+(
+    [0] => 7
+)
+
+2025-05-18 16:46:08 - Schedule query
+Query: 
+    SELECT 
+        s.id,
+        r.name AS route_name,
+        r.code AS route_code,
+        t.name AS train_name,
+        t.train_number,
+        s.departure_time,
+        s.days
+    FROM 
+        schedules s
+    JOIN 
+        routes r ON s.route_id = r.id
+    JOIN 
+        trains t ON s.train_id = t.id
+    WHERE 
+        s.status = 'active'
+ AND FIND_IN_SET(?, s.days) > 0 ORDER BY s.departure_time
+Params: Array
+(
+    [0] => 7
+)
+
+2025-05-18 18:37:54 - Schedule query
+Query: 
+    SELECT 
+        s.id,
+        r.name AS route_name,
+        r.code AS route_code,
+        t.name AS train_name,
+        t.train_number,
+        s.departure_time,
+        s.days
+    FROM 
+        schedules s
+    JOIN 
+        routes r ON s.route_id = r.id
+    JOIN 
+        trains t ON s.train_id = t.id
+    WHERE 
+        s.status = 'active'
+ AND FIND_IN_SET(?, s.days) > 0 ORDER BY s.departure_time
+Params: Array
+(
+    [0] => 7
+)
+
+2025-05-18 19:02:24 - Schedule query
+Query: 
+    SELECT 
+        s.id,
+        r.name AS route_name,
+        r.code AS route_code,
+        t.name AS train_name,
+        t.train_number,
+        s.departure_time,
+        s.days
+    FROM 
+        schedules s
+    JOIN 
+        routes r ON s.route_id = r.id
+    JOIN 
+        trains t ON s.train_id = t.id
+    WHERE 
+        s.status = 'active'
+ AND FIND_IN_SET(?, s.days) > 0 ORDER BY s.departure_time
+Params: Array
+(
+    [0] => 7
+)
+
+2025-05-18 19:02:40 - Schedule query
+Query: 
+    SELECT 
+        s.id,
+        r.name AS route_name,
+        r.code AS route_code,
+        t.name AS train_name,
+        t.train_number,
+        s.departure_time,
+        s.days
+    FROM 
+        schedules s
+    JOIN 
+        routes r ON s.route_id = r.id
+    JOIN 
+        trains t ON s.train_id = t.id
+    WHERE 
+        s.status = 'active'
+ AND FIND_IN_SET(?, s.days) > 0 ORDER BY s.departure_time
+Params: Array
+(
+    [0] => 7
+)
+
+2025-05-18 19:05:50 - Schedule query
+Query: 
+    SELECT 
+        s.id,
+        r.name AS route_name,
+        r.code AS route_code,
+        t.name AS train_name,
+        t.train_number,
+        s.departure_time,
+        s.days
+    FROM 
+        schedules s
+    JOIN 
+        routes r ON s.route_id = r.id
+    JOIN 
+        trains t ON s.train_id = t.id
+    WHERE 
+        s.status = 'active'
+ AND FIND_IN_SET(?, s.days) > 0 ORDER BY s.departure_time
+Params: Array
+(
+    [0] => 7
+)
+
+2025-05-18 19:17:00 - Schedule query
+Query: 
+    SELECT 
+        s.id,
+        r.name AS route_name,
+        r.code AS route_code,
+        t.name AS train_name,
+        t.train_number,
+        s.departure_time,
+        s.days
+    FROM 
+        schedules s
+    JOIN 
+        routes r ON s.route_id = r.id
+    JOIN 
+        trains t ON s.train_id = t.id
+    WHERE 
+        s.status = 'active'
+ AND FIND_IN_SET(?, s.days) > 0 ORDER BY s.departure_time
+Params: Array
+(
+    [0] => 7
+)
+
+2025-05-18 20:09:21 - Schedule query
+Query: 
+    SELECT 
+        s.id,
+        r.name AS route_name,
+        r.code AS route_code,
+        t.name AS train_name,
+        t.train_number,
+        s.departure_time,
+        s.days
+    FROM 
+        schedules s
+    JOIN 
+        routes r ON s.route_id = r.id
+    JOIN 
+        trains t ON s.train_id = t.id
+    WHERE 
+        s.status = 'active'
+ AND FIND_IN_SET(?, s.days) > 0 ORDER BY s.departure_time
+Params: Array
+(
+    [0] => 7
+)
+
+2025-05-18 20:09:29 - Schedule query
+Query: 
+    SELECT 
+        s.id,
+        r.name AS route_name,
+        r.code AS route_code,
+        t.name AS train_name,
+        t.train_number,
+        s.departure_time,
+        s.days
+    FROM 
+        schedules s
+    JOIN 
+        routes r ON s.route_id = r.id
+    JOIN 
+        trains t ON s.train_id = t.id
+    WHERE 
+        s.status = 'active'
+ AND FIND_IN_SET(?, s.days) > 0 ORDER BY s.departure_time
+Params: Array
+(
+    [0] => 7
+)
+

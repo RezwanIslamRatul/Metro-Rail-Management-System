@@ -1,0 +1,37 @@
+2025-05-18 19:23:18 - Admin check diagnostics
+Session: Array
+(
+    [last_activity] => 1747595821
+    [user_id] => 4
+    [user_name] => Mahmud Hasan
+    [user_email] => mahmudhs949@gmail.com
+    [user_role] => user
+)
+
+isLoggedIn(): true
+isAdmin(): false
+hasRole('admin'): false
+User Role: user
+
+2025-05-18 19:23:42 - Admin check diagnostics
+Session: Array
+(
+    [last_activity] => 1747596219
+)
+
+isLoggedIn(): false
+isAdmin(): false
+hasRole('admin'): false
+User Role: not set
+
+2025-05-18 20:03:32 - Admin check diagnostics
+Session: Array
+(
+    [last_activity] => 1747596696
+)
+
+isLoggedIn(): false
+isAdmin(): false
+hasRole('admin'): false
+User Role: not set
+

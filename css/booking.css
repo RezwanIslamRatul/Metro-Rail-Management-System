@@ -1,0 +1,733 @@
+/* Booking page specific styles */
+.booking-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.booking-header {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.booking-progress {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.booking-progress::before {
+    content: "";
+    position: absolute;
+    top: 24px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background-color: #e9ecef;
+    z-index: 1;
+}
+
+.progress-step {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
+.progress-step-number {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #e9ecef;
+    color: #6c757d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    transition: all 0.3s ease;
+}
+
+.progress-step.active .progress-step-number {
+    background-color: #0d6efd;
+    color: #fff;
+}
+
+.progress-step.completed .progress-step-number {
+    background-color: #198754;
+    color: #fff;
+}
+
+.progress-step-label {
+    font-weight: 500;
+    color: #6c757d;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.progress-step.active .progress-step-label,
+.progress-step.completed .progress-step-label {
+    color: #212529;
+    font-weight: 600;
+}
+
+.booking-content {
+    margin-bottom: 2rem;
+}
+
+.schedule-selection-table {
+    border-collapse: separate;
+    border-spacing: 0 0.5rem;
+}
+
+.schedule-row {
+    background-color: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.schedule-row:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.schedule-row td {
+    padding: 1rem;
+    vertical-align: middle;
+}
+
+.schedule-row td:first-child {
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+}
+
+.schedule-row td:last-child {
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+
+.train-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.train-name {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.train-number {
+    font-size: 0.8rem;
+    color: #6c757d;
+}
+
+.time-info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.time-badge {
+    background-color: rgba(13, 110, 253, 0.1);
+    color: #0d6efd;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-weight: 600;
+}
+
+.time-arrow {
+    color: #6c757d;
+}
+
+.journey-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.stations {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.station-badge {
+    background-color: #f8f9fa;
+    color: #495057;
+    padding: 0.15rem 0.4rem;
+    border-radius: 0.2rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.route-name {
+    font-size: 0.85rem;
+    color: #6c757d;
+}
+
+.fare-badge {
+    background-color: #e9f8ff;
+    color: #0d6efd;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.25rem;
+    font-weight: 600;
+}
+
+.passenger-summary {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.passenger-count {
+    background-color: #f8f9fa;
+    color: #495057;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
+
+.booking-summary {
+    padding: 1.5rem;
+    background-color: #f8f9fa;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.summary-section {
+    margin-bottom: 1.5rem;
+}
+
+.summary-section:last-child {
+    margin-bottom: 0;
+}
+
+.summary-section-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.summary-label {
+    color: #6c757d;
+    font-weight: 500;
+}
+
+.summary-value {
+    font-weight: 600;
+}
+
+.fare-summary {
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.fare-breakdown {
+    margin-bottom: 1rem;
+}
+
+.fare-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.fare-total {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 0.75rem;
+    margin-top: 0.75rem;
+    border-top: 1px dashed #dee2e6;
+}
+
+.fare-total-label {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.fare-total-value {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #0d6efd;
+}
+
+.form-section {
+    margin-bottom: 2rem;
+}
+
+.form-section-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.booking-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.booking-success {
+    text-align: center;
+    padding: 2rem;
+}
+
+.success-icon {
+    width: 80px;
+    height: 80px;
+    background-color: #d1e7dd;
+    color: #198754;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    margin: 0 auto 1.5rem;
+}
+
+.booking-id {
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #198754;
+}
+
+.ticket-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.ticket-qr {
+    width: 150px;
+    height: 150px;
+    margin: 1.5rem auto;
+    background-color: #f8f9fa;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.info-text {
+    color: #6c757d;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+}
+
+/* Modern Payment Styling */
+.payment-summary {
+    border: 1px solid rgba(0,0,0,.1);
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.05);
+    background: linear-gradient(to right, #f8f9fa 0%, #ffffff 100%);
+    overflow: hidden;
+    position: relative;
+}
+
+.payment-summary::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(to right, #0d6efd, #0a58ca, #0d6efd);
+    background-size: 200% auto;
+    animation: gradient-shift 3s linear infinite;
+}
+
+@keyframes gradient-shift {
+    0% { background-position: 0% center; }
+    100% { background-position: 200% center; }
+}
+
+.total-amount {
+    box-shadow: 0 4px 12px rgba(13, 110, 253, 0.15);
+    transition: all 0.3s ease;
+    background: linear-gradient(135deg, #0d6efd, #0a58ca);
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+.total-amount:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(13, 110, 253, 0.2);
+}
+
+.total-amount::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 80%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.total-amount:hover::before {
+    opacity: 1;
+}
+
+.payment-options {
+    margin-top: 1.5rem;
+}
+
+.payment-container {
+    display: block;
+    width: 100%;
+    margin: 0;
+    cursor: pointer;
+}
+
+.payment-option {
+    position: relative;
+    display: flex;
+    border: 2px solid #dee2e6;
+    border-radius: 10px;
+    padding: 1rem;
+    height: 100%;
+    transition: all 0.3s ease;
+    background: linear-gradient(to bottom, #ffffff, #f9f9f9);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+}
+
+.payment-option:hover {
+    border-color: #0d6efd;
+    background: linear-gradient(to bottom, #f8faff, #edf5ff);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.06);
+}
+
+.payment-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.payment-radio {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.check-indicator {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    height: 20px;
+    width: 20px;
+    background-color: #f1f1f1;
+    border: 1px solid #dee2e6;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+}
+
+.payment-radio:checked ~ .check-indicator {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+.payment-radio:checked ~ .check-indicator:after {
+    content: '';
+    position: absolute;
+    display: block;
+    left: 7px;
+    top: 4px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+/* Target the payment icon when radio is checked */
+.payment-radio:checked ~ .payment-content .payment-icon {
+    color: #0d6efd;
+    background-color: rgba(13, 110, 253, 0.1);
+    transform: scale(1.05);
+}
+
+/* Target the text when radio is checked */
+.payment-radio:checked ~ .payment-content .payment-text strong {
+    font-weight: 600;
+    color: #0d6efd;
+}
+
+/* Target the entire payment option when radio is checked */
+.payment-radio:checked ~ div,
+input:checked + .payment-option,
+.payment-option.selected {
+    border-color: #0d6efd;
+    background: linear-gradient(to bottom, #f0f7ff, #e6f0ff);
+    box-shadow: 0 3px 10px rgba(13, 110, 253, 0.15);
+}
+
+/* Additional Payment & Ticket Styles */
+.payment-info-card {
+    background: linear-gradient(to right, #f9f9f9, #f3f3f3);
+    border: 1px solid #e9ecef;
+    box-shadow: 0 2px 8px rgba(0,0,0,.03);
+}
+
+.payment-status-card {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    transition: all 0.3s ease;
+}
+
+.payment-status-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,.08);
+}
+
+.total-amount-badge {
+    background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
+    box-shadow: 0 3px 6px rgba(13, 110, 253, 0.2);
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.total-amount-badge:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(13, 110, 253, 0.3);
+}
+
+/* Modern Ticket Styles */
+.tickets-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.ticket-card {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,.08);
+    transition: all 0.3s ease;
+}
+
+.ticket-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,.1);
+}
+
+.ticket-header {
+    background: linear-gradient(to right, #f8f9fa, #e9ecef);
+    border-bottom: 1px dashed #dee2e6;
+}
+
+.ticket-body {
+    background-color: #fff;
+}
+
+.passenger-icon, .seat-icon {
+    width: 30px;
+    height: 30px;
+    background-color: rgba(13, 110, 253, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.validation-code code {
+    background-color: #f8f9fa;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    color: #0d6efd;
+}
+
+.ticket-qr-container {
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,.05);
+}
+
+.ticket-qr-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0,0,0,.1);
+}
+
+/* Modern Button Styles */
+.btn-modern {
+    border-radius: 8px;
+    padding: 0.6rem 1.2rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.btn-modern:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+/* Special styling for the payment submit button */
+.payment-submit-btn {
+    background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.payment-submit-btn:hover {
+    box-shadow: 0 5px 15px rgba(13, 110, 253, 0.3);
+    transform: translateY(-3px);
+}
+
+.payment-submit-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: 0.5s;
+    z-index: -1;
+}
+
+.payment-submit-btn:hover::before {
+    left: 100%;
+    animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+    100% {
+        left: 100%;
+    }
+}
+
+.btn-outline-danger.btn-modern {
+    border-width: 2px;
+}
+
+.btn-outline-danger.btn-modern:hover {
+    background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+}
+
+.booking-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+@media (min-width: 576px) {
+    .booking-actions {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+}
+
+/* Modal Enhancements */
+.warning-icon {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.payment-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    background-color: #f8f9fa;
+    border-radius: 50%;
+    margin-right: 1rem;
+    color: #6c757d;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.payment-icon::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(13, 110, 253, 0.1) 0%, rgba(255,255,255,0) 70%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.payment-option:hover .payment-icon::before {
+    opacity: 1;
+}
+
+.payment-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.payment-text strong {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    transition: color 0.3s ease;
+}
+
+.payment-text span {
+    font-size: 0.875rem;
+    color: #6c757d;
+}
+
+/* Additional payment form styling to ensure icons display properly */
+.payment-icon i {
+    font-size: 1.7rem;
+    color: #0d6efd;
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+
+.payment-option:hover .payment-icon i {
+    transform: scale(1.15);
+    color: #0a58ca;
+}
+.payment-icon i {
+    font-size: 1.5rem;
+}

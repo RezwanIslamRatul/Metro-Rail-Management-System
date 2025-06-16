@@ -1,0 +1,506 @@
+<?php
+// Start output buffering
+ob_start();
+
+// Include the admin authentication file
+require_once 'admin_auth.php';
+
+// Get admin information
+$userId = $_SESSION['user_id'];
+$admin = fetchRow("SELECT * FROM users WHERE id = ?", [$userId]);
+
+// Set page title
+$pageTitle = 'Manage Trains';
+
+// Check for form submissions
+$message = '';
+$error = '';
+
+// Handle form submissions
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if (isset($_POST['action'])) {
+        switch ($_POST['action']) {
+            case 'add':
+                // Add new train
+                $trainName = isset($_POST['train_name']) ? sanitizeInput($_POST['train_name']) : '';
+                $trainNumber = isset($_POST['train_number']) ? sanitizeInput($_POST['train_number']) : '';
+                $capacity = isset($_POST['capacity']) ? (int)$_POST['capacity'] : 0;
+                $status = isset($_POST['status']) ? sanitizeInput($_POST['status']) : 'active';
+                
+                // Validate inputs
+                if (empty($trainName) || empty($trainNumber) || $capacity <= 0) {
+                    $error = 'Please fill in all required fields.';
+                } else {
+                    // Check if train number already exists
+                    $existingTrain = fetchRow("SELECT id FROM trains WHERE train_number = ?", [$trainNumber]);
+                    
+                    if ($existingTrain) {
+                        $error = 'Train number already exists. Please use a unique train number.';
+                    } else {
+                        try {
+                            // Insert new train
+                            $result = executeQuery(
+                                "INSERT INTO trains (name, train_number, capacity, status, created_at) VALUES (?, ?, ?, ?, NOW())",
+                                [$trainName, $trainNumber, $capacity, $status]
+                            );
+                            
+                            if ($result) {
+                                $message = 'Train added successfully.';
+                            } else {
+                                $error = 'Failed to add train.';
+                            }
+                        } catch (Exception $e) {
+                            // Log the error
+                            debug_log('Train insert error: ' . $e->getMessage(), null, 'trains_error.log');
+                            if (strpos($e->getMessage(), 'Duplicate entry') !== false) {
+                                $error = 'Train number already exists. Please use a unique train number.';
+                            } else {
+                                $error = 'An error occurred while adding the train: ' . $e->getMessage();
+                            }
+                        }
+                    }
+                }
+                break;
+                
+            case 'update':
+                // Update existing train
+                $trainId = isset($_POST['train_id']) ? (int)$_POST['train_id'] : 0;
+                $trainName = isset($_POST['train_name']) ? sanitizeInput($_POST['train_name']) : '';
+                $trainNumber = isset($_POST['train_number']) ? sanitizeInput($_POST['train_number']) : '';
+                $capacity = isset($_POST['capacity']) ? (int)$_POST['capacity'] : 0;
+                $status = isset($_POST['status']) ? sanitizeInput($_POST['status']) : 'active';
+                
+                // Validate inputs
+                if ($trainId <= 0 || empty($trainName) || empty($trainNumber) || $capacity <= 0) {
+                    $error = 'Please fill in all required fields.';
+                } else {
+                    // Check if train number already exists for another train
+                    $existingTrain = fetchRow("SELECT id FROM trains WHERE train_number = ? AND id != ?", [$trainNumber, $trainId]);
+                    
+                    if ($existingTrain) {
+                        $error = 'Train number already exists. Please use a unique train number.';
+                    } else {
+                        try {
+                            // Update train
+                            $result = executeQuery(
+                                "UPDATE trains SET name = ?, train_number = ?, capacity = ?, status = ?, updated_at = NOW() WHERE id = ?",
+                                [$trainName, $trainNumber, $capacity, $status, $trainId]
+                            );
+                            
+                            if ($result) {
+                                $message = 'Train updated successfully.';
+                            } else {
+                                $error = 'Failed to update train.';
+                            }
+                        } catch (Exception $e) {
+                            // Log the error
+                            debug_log('Train update error: ' . $e->getMessage(), null, 'trains_error.log');
+                            if (strpos($e->getMessage(), 'Duplicate entry') !== false) {
+                                $error = 'Train number already exists. Please use a unique train number.';
+                            } else {
+                                $error = 'An error occurred while updating the train: ' . $e->getMessage();
+                            }
+                        }
+                    }
+                }
+                break;
+                
+            case 'delete':
+                // Delete train
+                $trainId = isset($_POST['train_id']) ? (int)$_POST['train_id'] : 0;
+                
+                if ($trainId <= 0) {
+                    $error = 'Invalid train ID.';
+                } else {
+                    // Check if train is used in schedules
+                    $used = fetchRow("SELECT COUNT(*) as count FROM train_schedules WHERE train_id = ?", [$trainId]);
+                    
+                    if ($used && $used['count'] > 0) {
+                        $error = 'Cannot delete train as it is used in schedules.';
+                    } else {
+                        $result = executeQuery("DELETE FROM trains WHERE id = ?", [$trainId]);
+                        
+                        if ($result) {
+                            $message = 'Train deleted successfully.';
+                        } else {
+                            $error = 'Failed to delete train.';
+                        }
+                    }
+                }
+                break;
+        }
+    }
+}
+
+// Get trains for display
+$trains = fetchRows("SELECT id, name as train_name, train_number, capacity, status, created_at, updated_at FROM trains ORDER BY name ASC");
+
+// Include header (the admin panel has a different layout)
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metro Rail - <?php echo $pageTitle; ?></title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="<?php echo APP_URL; ?>/css/style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-3 col-lg-2 d-md-block bg-dark sidebar collapse admin-sidebar">
+                <div class="position-sticky pt-3">
+                    <div class="text-center mb-4">
+                        <h4 class="text-white">
+                            <i class="fas fa-train me-2"></i>Metro Rail
+                        </h4>
+                        <p class="text-white-50 small">Admin Panel</p>
+                    </div>
+                    
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.php">
+                                <i class="fas fa-tachometer-alt"></i> Dashboard
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="stations.php">
+                                <i class="fas fa-map-marker-alt"></i> Stations
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="trains.php">
+                                <i class="fas fa-train"></i> Trains
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="routes.php">
+                                <i class="fas fa-route"></i> Routes
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="schedules.php">
+                                <i class="fas fa-clock"></i> Schedules
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="fares.php">
+                                <i class="fas fa-money-bill-wave"></i> Fares
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="bookings.php">
+                                <i class="fas fa-ticket-alt"></i> Bookings
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="users.php">
+                                <i class="fas fa-users"></i> Users
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="staff.php">
+                                <i class="fas fa-user-tie"></i> Staff
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="maintenance.php">
+                                <i class="fas fa-tools"></i> Maintenance
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="announcements.php">
+                                <i class="fas fa-bullhorn"></i> Announcements
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="reports.php">
+                                <i class="fas fa-chart-bar"></i> Reports
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="settings.php">
+                                <i class="fas fa-cog"></i> Settings
+                            </a>
+                        </li>
+                    </ul>
+                    
+                    <hr class="text-white-50">
+                    
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" href="profile.php">
+                                <i class="fas fa-user"></i> Profile
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?php echo APP_URL; ?>">
+                                <i class="fas fa-home"></i> Main Site
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?php echo APP_URL; ?>/logout.php">
+                                <i class="fas fa-sign-out-alt"></i> Logout
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Main Content -->
+            <div class="col-md-9 ms-sm-auto col-lg-10 px-md-4 py-4">
+                <!-- Header / Navbar -->
+                <nav class="navbar navbar-expand-lg navbar-light bg-light mb-4 rounded shadow-sm">
+                    <div class="container-fluid">
+                        <button class="navbar-toggler d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <span class="navbar-brand mb-0 h1"><i class="fas fa-train me-2"></i><?php echo $pageTitle; ?></span>
+                        <div class="d-flex">
+                            <div class="dropdown">
+                                <button class="btn btn-link dropdown-toggle text-decoration-none" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fas fa-user-circle me-1"></i> <?php echo $admin['name']; ?>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
+                                    <li><a class="dropdown-item" href="profile.php"><i class="fas fa-user-circle me-2"></i>Profile</a></li>
+                                    <li><a class="dropdown-item" href="<?php echo APP_URL; ?>"><i class="fas fa-home me-2"></i>Main Site</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="<?php echo APP_URL; ?>/logout.php"><i class="fas fa-sign-out-alt me-2"></i>Logout</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                
+                <!-- Page Content -->
+                <div class="card shadow mb-4">
+                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                        <h6 class="m-0 font-weight-bold">Trains List</h6>
+                        <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#addTrainModal">
+                            <i class="fas fa-plus"></i> Add New Train
+                        </button>
+                    </div>
+                    <div class="card-body">
+                        <?php if ($message): ?>
+                            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                <?php echo $message; ?>
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                        <?php endif; ?>
+                        
+                        <?php if ($error): ?>
+                            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                <?php echo $error; ?>
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                        <?php endif; ?>
+                        
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-hover">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>Train Name</th>
+                                        <th>Train Number</th>
+                                        <th>Capacity</th>
+                                        <th>Status</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php if (empty($trains)): ?>
+                                        <tr>
+                                            <td colspan="5" class="text-center">No trains found.</td>
+                                        </tr>
+                                    <?php else: ?>
+                                        <?php foreach ($trains as $train): ?>
+                                            <tr>
+                                                <td><?php echo htmlspecialchars($train['train_name']); ?></td>
+                                                <td><?php echo htmlspecialchars($train['train_number']); ?></td>
+                                                <td><?php echo htmlspecialchars($train['capacity']); ?></td>
+                                                <td>
+                                                    <span class="badge <?php echo $train['status'] === 'active' ? 'bg-success' : 'bg-danger'; ?>">
+                                                        <?php echo ucfirst(htmlspecialchars($train['status'])); ?>
+                                                    </span>
+                                                </td>
+                                                <td>
+                                                    <button type="button" class="btn btn-sm btn-primary edit-train" 
+                                                            data-id="<?php echo $train['id']; ?>"
+                                                            data-name="<?php echo htmlspecialchars($train['train_name']); ?>"
+                                                            data-number="<?php echo htmlspecialchars($train['train_number']); ?>"
+                                                            data-capacity="<?php echo htmlspecialchars($train['capacity']); ?>"
+                                                            data-status="<?php echo htmlspecialchars($train['status']); ?>"
+                                                            data-bs-toggle="modal" data-bs-target="#editTrainModal">
+                                                        <i class="fas fa-edit"></i> Edit
+                                                    </button>
+                                                    <button type="button" class="btn btn-sm btn-danger delete-train" 
+                                                            data-id="<?php echo $train['id']; ?>"
+                                                            data-name="<?php echo htmlspecialchars($train['train_name']); ?>"
+                                                            data-bs-toggle="modal" data-bs-target="#deleteTrainModal">
+                                                        <i class="fas fa-trash"></i> Delete
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                        <?php endforeach; ?>
+                                    <?php endif; ?>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Add Train Modal -->
+    <div class="modal fade" id="addTrainModal" tabindex="-1" aria-labelledby="addTrainModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addTrainModalLabel">Add New Train</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form action="" method="post">
+                    <input type="hidden" name="action" value="add">
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="train_name" class="form-label">Train Name *</label>
+                            <input type="text" class="form-control" id="train_name" name="train_name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="train_number" class="form-label">Train Number *</label>
+                            <input type="text" class="form-control" id="train_number" name="train_number" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="capacity" class="form-label">Capacity *</label>
+                            <input type="number" class="form-control" id="capacity" name="capacity" min="1" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="status" class="form-label">Status *</label>
+                            <select class="form-select" id="status" name="status" required>
+                                <option value="active">Active</option>
+                                <option value="inactive">Inactive</option>
+                                <option value="under_maintenance">Under Maintenance</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Add Train</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Edit Train Modal -->
+    <div class="modal fade" id="editTrainModal" tabindex="-1" aria-labelledby="editTrainModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editTrainModalLabel">Edit Train</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form action="" method="post">
+                    <input type="hidden" name="action" value="update">
+                    <input type="hidden" name="train_id" id="edit_train_id">
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="edit_train_name" class="form-label">Train Name *</label>
+                            <input type="text" class="form-control" id="edit_train_name" name="train_name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="edit_train_number" class="form-label">Train Number *</label>
+                            <input type="text" class="form-control" id="edit_train_number" name="train_number" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="edit_capacity" class="form-label">Capacity *</label>
+                            <input type="number" class="form-control" id="edit_capacity" name="capacity" min="1" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="edit_status" class="form-label">Status *</label>
+                            <select class="form-select" id="edit_status" name="status" required>
+                                <option value="active">Active</option>
+                                <option value="inactive">Inactive</option>
+                                <option value="under_maintenance">Under Maintenance</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Update Train</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Delete Train Modal -->
+    <div class="modal fade" id="deleteTrainModal" tabindex="-1" aria-labelledby="deleteTrainModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="deleteTrainModalLabel">Delete Train</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form action="" method="post">
+                    <input type="hidden" name="action" value="delete">
+                    <input type="hidden" name="train_id" id="delete_train_id">
+                    <div class="modal-body">
+                        <p>Are you sure you want to delete this train?</p>
+                        <p id="delete_train_name" class="font-weight-bold"></p>
+                        <p class="text-danger">This action cannot be undone. All data associated with this train will be permanently removed.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-danger">Delete Train</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Edit Train Modal
+            const editButtons = document.querySelectorAll('.edit-train');
+            editButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const id = this.getAttribute('data-id');
+                    const name = this.getAttribute('data-name');
+                    const number = this.getAttribute('data-number');
+                    const capacity = this.getAttribute('data-capacity');
+                    const status = this.getAttribute('data-status');
+                    
+                    document.getElementById('edit_train_id').value = id;
+                    document.getElementById('edit_train_name').value = name;
+                    document.getElementById('edit_train_number').value = number;
+                    document.getElementById('edit_capacity').value = capacity;
+                    document.getElementById('edit_status').value = status;
+                });
+            });
+            
+            // Delete Train Modal
+            const deleteButtons = document.querySelectorAll('.delete-train');
+            deleteButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const id = this.getAttribute('data-id');
+                    const name = this.getAttribute('data-name');
+                    
+                    document.getElementById('delete_train_id').value = id;
+                    document.getElementById('delete_train_name').textContent = name;
+                });
+            });
+        });
+    </script>
+</body>
+</html>

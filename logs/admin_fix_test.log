@@ -1,0 +1,17 @@
+2025-05-18 19:23:58 - Admin fix test
+Session before: Array
+(
+    [last_activity] => 1747596219
+)
+
+2025-05-18 19:23:58 - Admin session manually set
+Admin user found: admin@metrorail.com
+Session after: Array
+(
+    [last_activity] => 1747596238
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+)
+

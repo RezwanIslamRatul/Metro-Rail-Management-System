@@ -1,0 +1,22 @@
+/* Booking History Page Specific CSS */
+.action-buttons {
+    display: inline-flex;
+    white-space: nowrap;
+    min-width: 80px;
+}
+
+.booking-history-table {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.booking-history-table table {
+    min-width: 800px;
+}
+
+@media (max-width: 992px) {
+    .booking-history-table th, 
+    .booking-history-table td {
+        white-space: nowrap;
+    }
+}

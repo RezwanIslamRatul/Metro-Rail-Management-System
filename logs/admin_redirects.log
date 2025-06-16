@@ -1,0 +1,24 @@
+2025-05-18 21:23:14 - Admin redirect check
+Array
+(
+    [user_role] => admin
+    [isAdmin()] => true
+    [redirect_url] => http://localhost/metro-rail/admin
+)
+
+2025-05-19 09:33:45 - Admin redirect check
+Array
+(
+    [user_role] => admin
+    [isAdmin()] => true
+    [redirect_url] => http://localhost/metro-rail/admin
+)
+
+2025-05-19 15:25:41 - Admin redirect check
+Array
+(
+    [user_role] => admin
+    [isAdmin()] => true
+    [redirect_url] => http://localhost/metro-rail/admin
+)
+

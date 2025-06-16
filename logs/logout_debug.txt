@@ -1,0 +1,10 @@
+2025-05-18 20:47:06 - Logout page accessed
+SESSION before logout: {"last_activity":1747601221,"user_id":4,"user_name":"Mahmud Hasan","user_email":"mahmudhs949@gmail.com","user_role":"user"}
+2025-05-18 21:22:37 - Logout page accessed
+SESSION before logout: {"last_activity":1747603355,"user_id":4,"user_name":"Mahmud Hasan","user_email":"mahmudhs949@gmail.com","user_role":"user"}
+2025-05-18 21:23:08 - Logout page accessed
+SESSION before logout: {"last_activity":1747603375,"user_id":1,"user_name":"Admin User","user_email":"admin@metrorail.com","user_role":"admin"}
+2025-05-19 15:24:46 - Logout page accessed
+SESSION before logout: {"last_activity":1747668284,"user_id":4,"user_name":"Mahmud Hasan","user_email":"mahmudhs949@gmail.com","user_role":"user"}
+2025-05-19 15:30:59 - Logout page accessed
+SESSION before logout: {"last_activity":1747668654,"user_id":1,"user_name":"Admin User","user_email":"admin@metrorail.com","user_role":"admin"}

@@ -1,0 +1,65 @@
+2025-05-18 16:08:31 - Admin check
+Session data: Array
+(
+    [last_activity] => 1747584508
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+)
+
+isAdmin(): true
+isLoggedIn(): true
+Session ID: qcn2j7fniukdccr7brueqvmgin
+2025-05-18 16:08:43 - Admin check
+Session data: Array
+(
+    [last_activity] => 1747584508
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+)
+
+isAdmin(): true
+isLoggedIn(): true
+Session ID: qcn2j7fniukdccr7brueqvmgin
+2025-05-18 16:08:44 - Admin check
+Session data: Array
+(
+    [last_activity] => 1747584508
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+)
+
+isAdmin(): true
+isLoggedIn(): true
+Session ID: qcn2j7fniukdccr7brueqvmgin
+2025-05-18 16:44:23 - Admin check
+Session data: Array
+(
+    [last_activity] => 1747586661
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+)
+
+isAdmin(): true
+isLoggedIn(): true
+Session ID: qcn2j7fniukdccr7brueqvmgin
+2025-05-18 16:44:41 - Admin check
+Session data: Array
+(
+    [last_activity] => 1747586680
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+)
+
+isAdmin(): true
+isLoggedIn(): true
+Session ID: qcn2j7fniukdccr7brueqvmgin

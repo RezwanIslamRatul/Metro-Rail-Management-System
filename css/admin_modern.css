@@ -1,0 +1,288 @@
+/* Modern Admin Styling - Additional styles for Metro Rail Admin Panel */
+
+/* Admin Sidebar Styles */
+.admin-sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    padding: 0;
+    background: linear-gradient(135deg, #2c3e50 0%, #1a2530 100%);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+    width: 250px;
+}
+
+.admin-sidebar .position-sticky {
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.admin-sidebar .nav-link {
+    color: rgba(255, 255, 255, 0.7);
+    padding: 12px 20px;
+    border-left: 3px solid transparent;
+    transition: all 0.2s;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.admin-sidebar .nav-link i {
+    margin-right: 10px;
+    font-size: 1.1rem;
+    width: 24px;
+    text-align: center;
+}
+
+.admin-sidebar .nav-link:hover, 
+.admin-sidebar .nav-link.active {
+    color: #fff;
+    background-color: #3498db;
+    border-left-color: #fff;
+}
+
+.admin-sidebar .text-center {
+    padding: 20px 0;
+}
+
+.admin-sidebar hr {
+    border-color: rgba(255, 255, 255, 0.1);
+    margin: 20px 0;
+}
+
+/* Card Styles */
+.card {
+    border-radius: 12px;
+    box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
+    transition: transform .2s ease, box-shadow .2s ease;
+    border: none;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+
+/* Modal Styles */
+.modal-header {
+    border-radius: 8px 8px 0 0;
+    padding: 1rem 1.5rem;
+}
+.modal-content {
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+.modal-footer {
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 1rem 1.5rem;
+}
+
+/* Button Styles */
+.btn {
+    border-radius: 6px;
+    padding: 0.5rem 1.2rem;
+    font-weight: 500;
+    transition: all 0.2s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+/* Form Control Styles */
+.form-control, .form-select {
+    border-radius: 8px;
+    padding: 0.6rem 1rem;
+    border: 1px solid #e0e0e0;
+    transition: all 0.3s;
+}
+
+.form-control:focus, .form-select:focus {
+    box-shadow: 0 0 0 0.25rem rgba(52, 152, 219, 0.25);
+    border-color: #3498db;
+}
+
+.input-group {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.input-group-text {
+    border: none;
+    font-weight: 500;
+}
+
+/* Badge Styles */
+.badge {
+    font-weight: 500;
+    padding: 0.55em 0.8em;
+    font-size: 0.75em;
+}
+
+.booking-badge {
+    min-width: 90px;
+    text-align: center;
+}
+
+/* Table Styles */
+.table-responsive {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.table th {
+    font-weight: 600;
+    background-color: #f8f9fa;
+}
+
+/* Main Content Styles */
+.main-content {
+    margin-left: 250px;
+    transition: margin-left 0.3s;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: white !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,.05);
+}
+
+/* Dropdown Menu Styles */
+.dropdown-menu {
+    border: none;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+}
+
+.dropdown-item {
+    padding: 0.5rem 1rem;
+    transition: all 0.2s;
+}
+
+.dropdown-item:hover {
+    background-color: #f8f9fa;
+}
+
+/* Stat Card Styles */
+.stat-card .card-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #6c757d;
+}
+
+.stat-card .h3 {
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+.stat-card .stat-icon {
+    font-size: 2.5rem;
+    opacity: 0.8;
+    margin-bottom: 0.5rem;
+}
+
+/* Card Animations */
+.stat-card {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Helper Colors */
+.text-primary-light {
+    color: rgba(13, 110, 253, 0.7);
+}
+.text-success-light {
+    color: rgba(25, 135, 84, 0.7);
+}
+.text-info-light {
+    color: rgba(13, 202, 240, 0.7);
+}
+.text-warning-light {
+    color: rgba(255, 193, 7, 0.7);
+}
+
+/* Card Border Styles */
+.border-left-primary {
+    border-left: 4px solid #0d6efd;
+}
+.border-left-success {
+    border-left: 4px solid #198754;
+}
+.border-left-info {
+    border-left: 4px solid #0dcaf0;
+}
+.border-left-warning {
+    border-left: 4px solid #ffc107;
+}
+
+/* DataTables Custom Styling */
+.dataTables_filter input,
+.dataTables_length select {
+    border-radius: 8px !important;
+    padding: 0.375rem 0.75rem !important;
+    border: 1px solid #e0e0e0 !important;
+    transition: all 0.3s !important;
+}
+
+.dataTables_filter input:focus,
+.dataTables_length select:focus {
+    box-shadow: 0 0 0 0.25rem rgba(52, 152, 219, 0.25) !important;
+    border-color: #3498db !important;
+}
+
+/* Alert Styles */
+.alert {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,.05);
+}
+
+/* Pagination Styles */
+.pagination {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.page-item:first-child .page-link {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+/* Responsive styles for sidebar */
+@media (max-width: 767.98px) {
+    .admin-sidebar {
+        width: 100%;
+        position: static;
+        height: auto;
+    }
+    
+    .admin-sidebar .position-sticky {
+        height: auto;
+    }
+    
+    .main-content {
+        margin-left: 0;
+    }
+}
+
+.page-item:last-child .page-link {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.page-link {
+    border: none;
+    padding: 0.5rem 0.75rem;
+    color: #6c757d;
+}
+
+.page-item.active .page-link {
+    background-color: #0d6efd;
+    color: white;
+}

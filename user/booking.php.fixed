@@ -1,0 +1,532 @@
+<?php
+// Check if user is logged in
+require_once '../includes/config.php';
+require_once '../includes/db.php';
+require_once '../includes/functions.php';
+
+session_start();
+
+// Check if user is logged in
+if (!isLoggedIn()) {
+    // Redirect to login page with redirect parameter
+    redirect(APP_URL . '/login.php?redirect=' . urlencode(APP_URL . '/user/booking.php'));
+}
+
+// Get user information
+$userId = $_SESSION['user_id'];
+$user = fetchRow("SELECT * FROM users WHERE id = ?", [$userId]);
+
+// Get all active stations
+$stations = fetchRows("SELECT * FROM stations WHERE status = 'active' ORDER BY name ASC");
+
+// Get all active routes
+$routes = fetchRows("SELECT * FROM routes WHERE status = 'active' ORDER BY name ASC");
+
+// Initialize variables
+$errors = [];
+$success = '';
+$formData = [
+    'route_id' => '',
+    'from_station_id' => '',
+    'to_station_id' => '',
+    'journey_date' => '',
+    'passengers' => 1,
+    'schedule_id' => ''
+];
+
+// Get pre-filled form data from query string if available
+if (isset($_GET['from']) && isset($_GET['to'])) {
+    $formData['from_station_id'] = sanitizeInput($_GET['from']);
+    $formData['to_station_id'] = sanitizeInput($_GET['to']);
+}
+
+if (isset($_GET['date'])) {
+    $formData['journey_date'] = sanitizeInput($_GET['date']);
+}
+
+if (isset($_GET['passengers'])) {
+    $formData['passengers'] = max(1, min(5, (int)$_GET['passengers']));
+}
+
+// Check if form is submitted for schedule selection
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['step']) && $_POST['step'] === 'find_schedules') {
+    // Get form data
+    $formData = [
+        'route_id' => isset($_POST['route_id']) ? sanitizeInput($_POST['route_id']) : '',
+        'from_station_id' => isset($_POST['from_station_id']) ? sanitizeInput($_POST['from_station_id']) : '',
+        'to_station_id' => isset($_POST['to_station_id']) ? sanitizeInput($_POST['to_station_id']) : '',
+        'journey_date' => isset($_POST['journey_date']) ? sanitizeInput($_POST['journey_date']) : '',
+        'passengers' => isset($_POST['passengers']) ? max(1, min(5, (int)$_POST['passengers'])) : 1
+    ];
+    
+    // Validate form data
+    if (empty($formData['from_station_id'])) {
+        $errors[] = 'Please select a departure station';
+    }
+    
+    if (empty($formData['to_station_id'])) {
+        $errors[] = 'Please select an arrival station';
+    } elseif ($formData['from_station_id'] === $formData['to_station_id']) {
+        $errors[] = 'Departure and arrival stations cannot be the same';
+    }
+    
+    if (empty($formData['journey_date'])) {
+        $errors[] = 'Please select a journey date';
+    } elseif (strtotime($formData['journey_date']) < strtotime(date('Y-m-d'))) {
+        $errors[] = 'Journey date cannot be in the past';
+    } elseif (strtotime($formData['journey_date']) > strtotime('+30 days')) {
+        $errors[] = 'Journey date cannot be more than 30 days in the future';
+    }
+    
+    // Find routes containing both stations
+    if (empty($errors)) {
+        // Get schedules for the selected journey
+        $dayOfWeek = date('N', strtotime($formData['journey_date']));
+        $schedules = fetchRows("
+            SELECT s.*, 
+                   r.name as route_name, 
+                   r.id as route_id,
+                   t.name as train_name,
+                   t.train_number,
+                   rs_from.stop_order as from_order,
+                   rs_to.stop_order as to_order
+            FROM schedules s
+            JOIN routes r ON s.route_id = r.id
+            JOIN trains t ON s.train_id = t.id
+            JOIN route_stations rs_from ON r.id = rs_from.route_id AND rs_from.station_id = ?
+            JOIN route_stations rs_to ON r.id = rs_to.route_id AND rs_to.station_id = ?
+            WHERE s.status = 'active'
+            AND FIND_IN_SET(?, s.days) > 0
+            AND rs_from.stop_order < rs_to.stop_order
+            ORDER BY s.departure_time ASC
+        ", [
+            $formData['from_station_id'],
+            $formData['to_station_id'],
+            $dayOfWeek
+        ]);
+        
+        // If no schedules found
+        if (empty($schedules)) {
+            $errors[] = 'No schedules found for the selected journey. Please try different stations or date.';
+        }
+    }
+}
+
+// Check if form is submitted for final booking
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['step']) && $_POST['step'] === 'confirm_booking') {
+    // Get form data
+    $formData = [
+        'route_id' => isset($_POST['route_id']) ? sanitizeInput($_POST['route_id']) : '',
+        'from_station_id' => isset($_POST['from_station_id']) ? sanitizeInput($_POST['from_station_id']) : '',
+        'to_station_id' => isset($_POST['to_station_id']) ? sanitizeInput($_POST['to_station_id']) : '',
+        'journey_date' => isset($_POST['journey_date']) ? sanitizeInput($_POST['journey_date']) : '',
+        'passengers' => isset($_POST['passengers']) ? max(1, min(5, (int)$_POST['passengers'])) : 1,
+        'schedule_id' => isset($_POST['schedule_id']) ? sanitizeInput($_POST['schedule_id']) : ''
+    ];
+    
+    // Validate form data
+    if (empty($formData['schedule_id'])) {
+        $errors[] = 'Please select a schedule';
+    }
+    
+    // If no errors, proceed with booking
+    if (empty($errors)) {
+        // Get fare
+        $fare = fetchRow("
+            SELECT amount
+            FROM fares
+            WHERE route_id = ?
+            AND from_station_id = ?
+            AND to_station_id = ?
+        ", [
+            $formData['route_id'],
+            $formData['from_station_id'],
+            $formData['to_station_id']
+        ]);
+        
+        if (!$fare) {
+            // If fare not found, calculate based on distance
+            $fromStation = fetchRow("SELECT * FROM stations WHERE id = ?", [$formData['from_station_id']]);
+            $toStation = fetchRow("SELECT * FROM stations WHERE id = ?", [$formData['to_station_id']]);
+            
+            $distance = calculateDistance(
+                $fromStation['latitude'], 
+                $fromStation['longitude'], 
+                $toStation['latitude'], 
+                $toStation['longitude']
+            );
+            
+            $amount = calculateFare($distance);
+        } else {
+            $amount = $fare['amount'];
+        }
+        
+        // Calculate total amount
+        $totalAmount = $amount * $formData['passengers'];
+        
+        // Generate booking number
+        $bookingNumber = 'MR' . date('YmdHis') . rand(1000, 9999);
+        
+        // Insert booking
+        $bookingData = [
+            'booking_number' => $bookingNumber,
+            'user_id' => $userId,
+            'schedule_id' => $formData['schedule_id'],
+            'from_station_id' => $formData['from_station_id'],
+            'to_station_id' => $formData['to_station_id'],
+            'journey_date' => $formData['journey_date'],
+            'booking_date' => date('Y-m-d H:i:s'),
+            'passengers' => $formData['passengers'],
+            'amount' => $totalAmount,
+            'payment_status' => 'pending', // In a real system, this would be handled by a payment gateway
+            'booking_status' => 'pending',
+            'created_at' => date('Y-m-d H:i:s')
+        ];
+        
+        $bookingId = insert('bookings', $bookingData);
+        
+        if ($bookingId) {
+            // For each passenger, generate a ticket
+            for ($i = 0; $i < $formData['passengers']; $i++) {
+                $ticketNumber = 'TK' . date('YmdHis') . rand(1000, 9999);
+                $passengerName = $i === 0 ? $user['name'] : 'Guest ' . ($i + 1);
+                $seatNumber = 'A' . rand(1, 50); // In a real system, this would be based on available seats
+                $barcode = generateRandomString(20);
+                
+                $ticketData = [
+                    'booking_id' => $bookingId,
+                    'ticket_number' => $ticketNumber,
+                    'passenger_name' => $passengerName,
+                    'seat_number' => $seatNumber,
+                    'barcode' => $barcode,
+                    'status' => 'active',
+                    'created_at' => date('Y-m-d H:i:s')
+                ];
+                
+                insert('tickets', $ticketData);
+            }
+            
+            // Log activity
+            logActivity('booking_created', 'Created a new booking #' . $bookingNumber, $userId);
+            
+            // Set success message
+            $success = 'Booking created successfully! Your booking number is ' . $bookingNumber;
+            
+            // In a real system, redirect to payment page
+            redirect(APP_URL . '/user/view-booking.php?id=' . $bookingId);
+        } else {
+            $errors[] = 'Failed to create booking. Please try again.';
+        }
+    }
+}
+
+// Set page title
+$pageTitle = 'Book Ticket';
+
+// Include header
+require_once '../includes/header.php';
+?>
+
+<div class="container-fluid">
+    <div class="row">
+        <!-- User Sidebar -->
+        <div class="col-md-3">
+            <div class="card mb-4">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0"><i class="fas fa-user-circle me-2"></i>User Profile</h5>
+                </div>
+                <div class="card-body text-center">
+                    <img src="https://via.placeholder.com/150" alt="Profile Picture" class="rounded-circle img-thumbnail mb-3">
+                    <h5><?php echo $user['name']; ?></h5>
+                    <p class="text-muted"><?php echo $user['email']; ?></p>
+                    <hr>
+                    <div class="d-grid gap-2">
+                        <a href="profile.php" class="btn btn-outline-primary">
+                            <i class="fas fa-edit me-2"></i>Edit Profile
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="list-group mb-4">
+                <a href="index.php" class="list-group-item list-group-item-action">
+                    <i class="fas fa-tachometer-alt me-2"></i>Dashboard
+                </a>
+                <a href="booking.php" class="list-group-item list-group-item-action active">
+                    <i class="fas fa-ticket-alt me-2"></i>Book Ticket
+                </a>
+                <a href="history.php" class="list-group-item list-group-item-action">
+                    <i class="fas fa-history me-2"></i>Booking History
+                </a>
+                <a href="profile.php" class="list-group-item list-group-item-action">
+                    <i class="fas fa-user-edit me-2"></i>My Profile
+                </a>
+                <a href="password.php" class="list-group-item list-group-item-action">
+                    <i class="fas fa-key me-2"></i>Change Password
+                </a>
+            </div>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="col-md-9">
+            <!-- Page Title -->
+            <div class="card mb-4">
+                <div class="card-body bg-primary text-white">
+                    <h4><i class="fas fa-ticket-alt me-2"></i>Book Your Metro Ticket</h4>
+                    <p class="mb-0">Select your journey details and book your ticket in a few easy steps.</p>
+                </div>
+            </div>
+            
+            <!-- Booking Process Steps -->
+            <div class="card mb-4">
+                <div class="card-body">
+                    <div class="row text-center">
+                        <div class="col-md-4 <?php echo !isset($_POST['step']) || $_POST['step'] === 'find_schedules' ? 'text-primary fw-bold' : ''; ?>">
+                            <div class="step-icon rounded-circle bg-<?php echo !isset($_POST['step']) || $_POST['step'] === 'find_schedules' ? 'primary' : 'light'; ?> text-<?php echo !isset($_POST['step']) || $_POST['step'] === 'find_schedules' ? 'white' : 'muted'; ?> d-inline-flex align-items-center justify-content-center">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="mt-2">Select Journey</div>
+                        </div>
+                        <div class="col-md-4 <?php echo isset($_POST['step']) && ($_POST['step'] === 'select_schedule' || $_POST['step'] === 'confirm_booking') ? 'text-primary fw-bold' : ''; ?>">
+                            <div class="step-icon rounded-circle bg-<?php echo isset($_POST['step']) && ($_POST['step'] === 'select_schedule' || $_POST['step'] === 'confirm_booking') ? 'primary' : 'light'; ?> text-<?php echo isset($_POST['step']) && ($_POST['step'] === 'select_schedule' || $_POST['step'] === 'confirm_booking') ? 'white' : 'muted'; ?> d-inline-flex align-items-center justify-content-center">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="mt-2">Select Schedule</div>
+                        </div>
+                        <div class="col-md-4 <?php echo isset($_POST['step']) && $_POST['step'] === 'confirm_booking' && empty($errors) ? 'text-primary fw-bold' : ''; ?>">
+                            <div class="step-icon rounded-circle bg-<?php echo isset($_POST['step']) && $_POST['step'] === 'confirm_booking' && empty($errors) ? 'primary' : 'light'; ?> text-<?php echo isset($_POST['step']) && $_POST['step'] === 'confirm_booking' && empty($errors) ? 'white' : 'muted'; ?> d-inline-flex align-items-center justify-content-center">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="mt-2">Confirm & Pay</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Error Messages -->
+            <?php if (!empty($errors)): ?>
+                <div class="alert alert-danger">
+                    <ul class="mb-0">
+                        <?php foreach ($errors as $error): ?>
+                            <li><?php echo $error; ?></li>
+                        <?php endforeach; ?>
+                    </ul>
+                </div>
+            <?php endif; ?>
+            
+            <!-- Success Message -->
+            <?php if (!empty($success)): ?>
+                <div class="alert alert-success">
+                    <?php echo $success; ?>
+                </div>
+            <?php endif; ?>
+            
+            <!-- Step 1: Journey Selection Form -->
+            <?php if (!isset($_POST['step']) || (isset($_POST['step']) && $_POST['step'] === 'find_schedules' && !empty($errors))): ?>
+                <div class="card mb-4">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0"><i class="fas fa-search me-2"></i>Find Your Journey</h5>
+                    </div>
+                    <div class="card-body">
+                        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" id="journey-form">
+                            <input type="hidden" name="step" value="find_schedules">
+                            
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <label for="from_station_id" class="form-label">From Station</label>
+                                    <select class="form-select" id="from_station_id" name="from_station_id" required>
+                                        <option value="" selected disabled>Select departure station</option>
+                                        <?php foreach ($stations as $station): ?>
+                                            <option value="<?php echo $station['id']; ?>" <?php echo $formData['from_station_id'] == $station['id'] ? 'selected' : ''; ?>>
+                                                <?php echo $station['name']; ?> (<?php echo $station['code']; ?>)
+                                            </option>
+                                        <?php endforeach; ?>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="to_station_id" class="form-label">To Station</label>
+                                    <select class="form-select" id="to_station_id" name="to_station_id" required>
+                                        <option value="" selected disabled>Select arrival station</option>
+                                        <?php foreach ($stations as $station): ?>
+                                            <option value="<?php echo $station['id']; ?>" <?php echo $formData['to_station_id'] == $station['id'] ? 'selected' : ''; ?>>
+                                                <?php echo $station['name']; ?> (<?php echo $station['code']; ?>)
+                                            </option>
+                                        <?php endforeach; ?>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <label for="journey_date" class="form-label">Journey Date</label>
+                                    <input type="date" class="form-control" id="journey_date" name="journey_date" 
+                                           min="<?php echo date('Y-m-d'); ?>" 
+                                           max="<?php echo date('Y-m-d', strtotime('+30 days')); ?>" 
+                                           value="<?php echo $formData['journey_date'] ?: date('Y-m-d'); ?>"
+                                           required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="passengers" class="form-label">Number of Passengers</label>
+                                    <select class="form-select" id="passengers" name="passengers" required>
+                                        <?php for ($i = 1; $i <= 5; $i++): ?>
+                                            <option value="<?php echo $i; ?>" <?php echo $formData['passengers'] == $i ? 'selected' : ''; ?>>
+                                                <?php echo $i; ?> <?php echo $i === 1 ? 'passenger' : 'passengers'; ?>
+                                            </option>
+                                        <?php endfor; ?>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="d-grid gap-2">
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fas fa-search me-2"></i>Find Schedules
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            <?php endif; ?>
+            
+            <!-- Step 2: Schedule Selection -->
+            <?php if (isset($_POST['step']) && $_POST['step'] === 'find_schedules' && empty($errors)): ?>
+                <div class="card mb-4">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0"><i class="fas fa-clock me-2"></i>Available Schedules</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="journey-details mb-4">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h6>Journey Details:</h6>
+                                    <p>
+                                        <strong>From:</strong> <?php echo fetchRow("SELECT name FROM stations WHERE id = ?", [$formData['from_station_id']])['name']; ?><br>
+                                        <strong>To:</strong> <?php echo fetchRow("SELECT name FROM stations WHERE id = ?", [$formData['to_station_id']])['name']; ?><br>
+                                        <strong>Date:</strong> <?php echo formatDate($formData['journey_date'], 'l, F j, Y'); ?><br>
+                                        <strong>Passengers:</strong> <?php echo $formData['passengers']; ?>
+                                    </p>
+                                </div>
+                                <div class="col-md-6 text-md-end">
+                                    <a href="booking.php" class="btn btn-outline-primary">
+                                        <i class="fas fa-edit me-2"></i>Change
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" id="schedule-form">
+                            <input type="hidden" name="step" value="confirm_booking">
+                            <input type="hidden" name="from_station_id" value="<?php echo $formData['from_station_id']; ?>">
+                            <input type="hidden" name="to_station_id" value="<?php echo $formData['to_station_id']; ?>">
+                            <input type="hidden" name="journey_date" value="<?php echo $formData['journey_date']; ?>">
+                            <input type="hidden" name="passengers" value="<?php echo $formData['passengers']; ?>">
+                            
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Select</th>
+                                            <th>Train</th>
+                                            <th>Route</th>
+                                            <th>Departure</th>
+                                            <th>Arrival</th>
+                                            <th>Duration</th>
+                                            <th>Fare</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <?php foreach ($schedules as $schedule): ?>
+                                            <?php
+                                            // Calculate estimated duration based on stop order difference
+                                            // We'll estimate 10 minutes per stop
+                                            $stopDifference = $schedule['to_order'] - $schedule['from_order'];
+                                            $duration = $stopDifference * 10; // minutes
+                                            
+                                            // Calculate estimated arrival time
+                                            $departureTime = strtotime($schedule['departure_time']);
+                                            $arrivalTime = $departureTime + ($duration * 60); // convert minutes to seconds
+                                            
+                                            // Get fare
+                                            $fare = fetchRow("
+                                                SELECT amount
+                                                FROM fares
+                                                WHERE route_id = ?
+                                                AND from_station_id = ?
+                                                AND to_station_id = ?
+                                            ", [
+                                                $schedule['route_id'],
+                                                $formData['from_station_id'],
+                                                $formData['to_station_id']
+                                            ]);
+                                            
+                                            if (!$fare) {
+                                                // If fare not found, calculate based on distance
+                                                $fromStation = fetchRow("SELECT * FROM stations WHERE id = ?", [$formData['from_station_id']]);
+                                                $toStation = fetchRow("SELECT * FROM stations WHERE id = ?", [$formData['to_station_id']]);
+                                                
+                                                $distance = calculateDistance(
+                                                    $fromStation['latitude'], 
+                                                    $fromStation['longitude'], 
+                                                    $toStation['latitude'], 
+                                                    $toStation['longitude']
+                                                );
+                                                
+                                                $fareAmount = calculateFare($distance);
+                                            } else {
+                                                $fareAmount = $fare['amount'];
+                                            }
+                                            
+                                            // Total fare for all passengers
+                                            $totalFare = $fareAmount * $formData['passengers'];
+                                            ?>
+                                            <tr>
+                                                <td>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="schedule_id" id="schedule_<?php echo $schedule['id']; ?>" value="<?php echo $schedule['id']; ?>" required>
+                                                        <input type="hidden" name="route_id" value="<?php echo $schedule['route_id']; ?>">
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <?php echo $schedule['train_name']; ?><br>
+                                                    <small class="text-muted"><?php echo $schedule['train_number']; ?></small>
+                                                    <a href="../schedule-detail.php?id=<?php echo $schedule['id']; ?>&date=<?php echo $formData['journey_date']; ?>" target="_blank" class="badge bg-info text-decoration-none">
+                                                        <i class="fas fa-info-circle"></i> Details
+                                                    </a>
+                                                </td>
+                                                <td><?php echo $schedule['route_name']; ?></td>
+                                                <td><?php echo date('h:i A', strtotime($schedule['departure_time'])); ?></td>
+                                                <td><?php echo date('h:i A', $arrivalTime); ?> (est.)</td>
+                                                <td><?php echo floor($duration / 60) . 'h ' . ($duration % 60) . 'm'; ?></td>
+                                                <td>
+                                                    <?php echo formatCurrency($fareAmount); ?> × <?php echo $formData['passengers']; ?><br>
+                                                    <strong><?php echo formatCurrency($totalFare); ?></strong>
+                                                </td>
+                                            </tr>
+                                        <?php endforeach; ?>
+                                    </tbody>
+                                </table>
+                            </div>
+                            
+                            <div class="d-grid gap-2 mt-3">
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fas fa-check me-2"></i>Continue to Booking
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            <?php endif; ?>
+        </div>
+    </div>
+</div>
+
+<style>
+    .step-icon {
+        width: 40px;
+        height: 40px;
+    }
+</style>
+
+<?php
+// Include footer
+require_once '../includes/footer.php';
+?>

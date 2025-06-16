@@ -1,0 +1,343 @@
+<?php
+/**
+ * Database Connection
+ */
+
+// Include configuration file
+require_once 'config.php';
+
+// Create connection
+$conn = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+
+// Check connection
+if ($conn->connect_error) {
+    if (DEBUG_MODE) {
+        die('Database Connection Failed: ' . $conn->connect_error);
+    } else {
+        die('Database Connection Failed. Please try again later.');
+    }
+}
+
+// Set charset to UTF-8
+$conn->set_charset('utf8');
+
+/**
+ * Execute a query and return the result
+ * 
+ * @param string $sql
+ * @param array $params
+ * @return mixed
+ */
+function executeQuery($sql, $params = []) {
+    global $conn;
+    
+    $stmt = $conn->prepare($sql);
+    
+    if ($stmt === false) {
+        return false;
+    }
+      if (!empty($params)) {
+        $types = '';
+        $bindParams = [];
+        
+        foreach ($params as $param) {
+            if (is_int($param)) {
+                $types .= 'i';
+            } elseif (is_float($param)) {
+                $types .= 'd';
+            } elseif (is_string($param)) {
+                $types .= 's';
+            } else {
+                $types .= 'b';
+            }
+            
+            $bindParams[] = $param;
+        }
+        
+        // Create an array of references
+        $bindParamsRef = [];
+        $bindParamsRef[0] = $types;
+        
+        for ($i = 0; $i < count($bindParams); $i++) {
+            $bindParamsRef[$i+1] = &$bindParams[$i];
+        }
+        
+        // Call bind_param with references
+        call_user_func_array([$stmt, 'bind_param'], $bindParamsRef);
+    }
+    
+    $stmt->execute();
+    
+    $result = $stmt->get_result();
+    
+    return $result;
+}
+
+/**
+ * Fetch a single row from the database
+ * 
+ * @param string $sql
+ * @param array $params
+ * @return array|null
+ */
+function fetchRow($sql, $params = []) {
+    $result = executeQuery($sql, $params);
+    
+    if ($result && $result->num_rows > 0) {
+        return $result->fetch_assoc();
+    }
+    
+    return null;
+}
+
+/**
+ * Fetch multiple rows from the database
+ * 
+ * @param string $sql
+ * @param array $params
+ * @return array
+ */
+function fetchRows($sql, $params = []) {
+    $result = executeQuery($sql, $params);
+    
+    $rows = [];
+    
+    if ($result && $result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+            $rows[] = $row;
+        }
+    }
+    
+    return $rows;
+}
+
+/**
+ * Insert data into a table
+ * 
+ * @param string $table
+ * @param array $data
+ * @return int|bool
+ */
+function insert($table, $data) {
+    global $conn;
+    
+    try {
+        $columns = implode(', ', array_keys($data));
+        $placeholders = implode(', ', array_fill(0, count($data), '?'));
+        
+        $sql = "INSERT INTO $table ($columns) VALUES ($placeholders)";
+        
+        $stmt = $conn->prepare($sql);
+        
+        if ($stmt === false) {
+            $error = "Prepare statement failed: " . $conn->error;
+            error_log($error);
+            return false;
+        }
+        
+        $types = '';
+        $bindParams = [];
+    
+        foreach ($data as $param) {
+            if (is_int($param)) {
+                $types .= 'i';
+            } elseif (is_float($param)) {
+                $types .= 'd';
+            } elseif (is_string($param)) {
+                $types .= 's';
+            } else {
+                $types .= 'b';
+            }
+            
+            $bindParams[] = $param;
+        }
+        
+        // Create an array of references
+        $bindParamsRef = [];
+        $bindParamsRef[0] = $types;
+        
+        for ($i = 0; $i < count($bindParams); $i++) {
+            $bindParamsRef[$i+1] = &$bindParams[$i];
+        }
+        
+        // Call bind_param with references
+        if (!empty($bindParams)) {
+            call_user_func_array([$stmt, 'bind_param'], $bindParamsRef);
+        }
+        
+        $result = $stmt->execute();
+        
+        if (!$result) {
+            $error = "Execute failed: " . $stmt->error;
+            error_log($error);
+            return false;
+        }
+        
+        if ($stmt->affected_rows > 0) {
+            return $conn->insert_id;
+        }
+        
+        return false;
+    } catch (Exception $e) {
+        error_log("Exception in insert function: " . $e->getMessage());
+        return false;
+    }
+}
+
+/**
+ * Update data in a table
+ * 
+ * @param string $table
+ * @param array $data
+ * @param string $where
+ * @param array $whereParams
+ * @return bool
+ */
+function update($table, $data, $where, $whereParams = []) {
+    global $conn;
+    
+    try {
+        $setParts = [];
+        
+        foreach (array_keys($data) as $column) {
+            $setParts[] = "$column = ?";
+        }
+        
+        $setClause = implode(', ', $setParts);
+        
+        $sql = "UPDATE $table SET $setClause WHERE $where";
+        
+        $stmt = $conn->prepare($sql);
+        
+        if ($stmt === false) {
+            $error = "Prepare statement failed: " . $conn->error;
+            error_log($error);
+            return false;
+        }
+        
+        $types = '';
+        $bindParams = [];
+        
+        // Add data params
+        foreach ($data as $param) {
+            if (is_int($param)) {
+                $types .= 'i';
+            } elseif (is_float($param)) {
+                $types .= 'd';
+            } elseif (is_string($param)) {
+                $types .= 's';
+            } else {
+                $types .= 'b';
+            }
+            
+            $bindParams[] = $param;
+        }
+        
+        // Add where params
+        foreach ($whereParams as $param) {
+            if (is_int($param)) {
+                $types .= 'i';
+            } elseif (is_float($param)) {
+                $types .= 'd';
+            } elseif (is_string($param)) {
+                $types .= 's';
+            } else {
+                $types .= 'b';
+            }
+            
+            $bindParams[] = $param;
+        }
+        
+        // Create an array of references
+        $bindParamsRef = [];
+        $bindParamsRef[0] = $types;
+        
+        for ($i = 0; $i < count($bindParams); $i++) {
+            $bindParamsRef[$i+1] = &$bindParams[$i];
+        }
+        
+        // Call bind_param with references
+        if (!empty($bindParams)) {
+            call_user_func_array([$stmt, 'bind_param'], $bindParamsRef);
+        }
+        
+        $result = $stmt->execute();
+        
+        if (!$result) {
+            $error = "Execute failed: " . $stmt->error;
+            error_log($error);
+            return false;
+        }
+        
+        // For debugging purposes
+        file_put_contents('C:/xampp/htdocs/metro-rail/debug_log.txt', 
+            date('Y-m-d H:i:s') . " - UPDATE SQL: $sql, Affected rows: " . $stmt->affected_rows . "\n", 
+            FILE_APPEND
+        );
+        
+        return $stmt->affected_rows > 0 || $stmt->affected_rows === 0;
+        
+    } catch (Exception $e) {
+        error_log("Exception in update function: " . $e->getMessage());
+        return false;
+    }
+}
+
+/**
+ * Delete data from a table
+ * 
+ * @param string $table
+ * @param string $where
+ * @param array $whereParams
+ * @return bool
+ */
+function delete($table, $where, $whereParams = []) {
+    global $conn;
+    
+    try {
+        $sql = "DELETE FROM $table WHERE $where";
+        
+        $stmt = $conn->prepare($sql);
+        
+        if ($stmt === false) {
+            return false;
+        }
+        
+        if (!empty($whereParams)) {
+            $types = '';
+            $bindParams = [];
+            
+            foreach ($whereParams as $param) {
+                if (is_int($param)) {
+                    $types .= 'i';
+                } elseif (is_float($param)) {
+                    $types .= 'd';
+                } elseif (is_string($param)) {
+                    $types .= 's';
+                } else {
+                    $types .= 'b';
+                }
+                
+                $bindParams[] = $param;
+            }
+            
+            // Create an array of references
+            $bindParamsRef = [];
+            $bindParamsRef[0] = $types;
+            
+            for ($i = 0; $i < count($bindParams); $i++) {
+                $bindParamsRef[$i+1] = &$bindParams[$i];
+            }
+            
+            // Call bind_param with references
+            call_user_func_array([$stmt, 'bind_param'], $bindParamsRef);
+        }
+        
+        $stmt->execute();
+        
+        return $stmt->affected_rows > 0;
+    } catch (Exception $e) {
+        error_log("Exception in delete function: " . $e->getMessage());
+        return false;
+    }
+}

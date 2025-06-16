@@ -1,0 +1,38 @@
+2025-05-18 20:23:51 - Login successful for user: mahmudhs949@gmail.com
+User ID: 4
+User Role: user
+SESSION after login: {"last_activity":1747599831,"user_id":4,"user_name":"Mahmud Hasan","user_email":"mahmudhs949@gmail.com","user_role":"user"}
+Redirecting to user dashboard
+2025-05-18 20:47:11 - Login successful for user: mahmudhs949@gmail.com
+User ID: 4
+User Role: user
+SESSION after login: {"last_activity":1747601231,"user_id":4,"user_name":"Mahmud Hasan","user_email":"mahmudhs949@gmail.com","user_role":"user"}
+Redirecting to user dashboard
+2025-05-18 21:23:14 - Login successful for user: admin@metrorail.com
+User ID: 1
+User Role: admin
+SESSION after login: {"last_activity":1747603394,"user_id":1,"user_name":"Admin User","user_email":"admin@metrorail.com","user_role":"admin"}
+Redirecting to admin dashboard
+Redirect URL: http://localhost/metro-rail/admin
+2025-05-19 09:33:45 - Login successful for user: admin@metrorail.com
+User ID: 1
+User Role: admin
+SESSION after login: {"last_activity":1747647225,"user_id":1,"user_name":"Admin User","user_email":"admin@metrorail.com","user_role":"admin"}
+Redirecting to admin dashboard
+Redirect URL: http://localhost/metro-rail/admin
+2025-05-19 13:53:45 - Login successful for user: mahmudhs949@gmail.com
+User ID: 4
+User Role: user
+SESSION after login: {"last_activity":1747662825,"user_id":4,"user_name":"Mahmud Hasan","user_email":"mahmudhs949@gmail.com","user_role":"user"}
+Redirecting to user dashboard
+2025-05-19 15:25:41 - Login successful for user: admin@metrorail.com
+User ID: 1
+User Role: admin
+SESSION after login: {"last_activity":1747668341,"user_id":1,"user_name":"Admin User","user_email":"admin@metrorail.com","user_role":"admin"}
+Redirecting to admin dashboard
+Redirect URL: http://localhost/metro-rail/admin
+2025-05-19 15:31:01 - Login successful for user: mahmudhs949@gmail.com
+User ID: 4
+User Role: user
+SESSION after login: {"last_activity":1747668661,"user_id":4,"user_name":"Mahmud Hasan","user_email":"mahmudhs949@gmail.com","user_role":"user"}
+Redirecting to user dashboard

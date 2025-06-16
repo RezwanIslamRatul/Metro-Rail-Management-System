@@ -1,0 +1,90 @@
+2025-05-18 20:23:32 - Login attempt
+Array
+(
+    [email] => admin@admin.com
+    [user_found] => no
+    [status] => n/a
+    [role] => n/a
+)
+
+2025-05-18 20:23:51 - Login attempt
+Array
+(
+    [email] => mahmudhs949@gmail.com
+    [user_found] => yes
+    [status] => active
+    [role] => user
+)
+
+2025-05-18 20:47:11 - Login attempt
+Array
+(
+    [email] => mahmudhs949@gmail.com
+    [user_found] => yes
+    [status] => active
+    [role] => user
+)
+
+2025-05-18 21:23:14 - Login attempt
+Array
+(
+    [email] => admin@metrorail.com
+    [user_found] => yes
+    [status] => active
+    [role] => admin
+)
+
+2025-05-19 09:33:21 - Login attempt
+Array
+(
+    [email] => admin@metroraril.com
+    [user_found] => no
+    [status] => n/a
+    [role] => n/a
+)
+
+2025-05-19 09:33:36 - Login attempt
+Array
+(
+    [email] => admin@metrorail.com
+    [user_found] => yes
+    [status] => active
+    [role] => admin
+)
+
+2025-05-19 09:33:45 - Login attempt
+Array
+(
+    [email] => admin@metrorail.com
+    [user_found] => yes
+    [status] => active
+    [role] => admin
+)
+
+2025-05-19 13:53:45 - Login attempt
+Array
+(
+    [email] => mahmudhs949@gmail.com
+    [user_found] => yes
+    [status] => active
+    [role] => user
+)
+
+2025-05-19 15:25:40 - Login attempt
+Array
+(
+    [email] => admin@metrorail.com
+    [user_found] => yes
+    [status] => active
+    [role] => admin
+)
+
+2025-05-19 15:31:01 - Login attempt
+Array
+(
+    [email] => mahmudhs949@gmail.com
+    [user_found] => yes
+    [status] => active
+    [role] => user
+)
+

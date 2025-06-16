@@ -1,0 +1,29 @@
+2025-05-18 23:27:02 - Direct admin login used
+Admin ID: 1
+Admin Email: admin@metrorail.com
+Session data: Array
+(
+    [last_activity] => 1747610822
+    [user_id] => 1
+    [user_name] => Admin User
+    [user_email] => admin@metrorail.com
+    [user_role] => admin
+)
+
+
+2025-05-18 23:27:02 - Direct admin login
+Array
+(
+    [admin_id] => 1
+    [admin_email] => admin@metrorail.com
+    [session] => Array
+        (
+            [last_activity] => 1747610822
+            [user_id] => 1
+            [user_name] => Admin User
+            [user_email] => admin@metrorail.com
+            [user_role] => admin
+        )
+
+)
+

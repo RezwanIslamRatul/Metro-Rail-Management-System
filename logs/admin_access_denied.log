@@ -1,0 +1,7 @@
+2025-05-18 23:26:11 - Admin access denied - Not logged in
+Array
+(
+    [request_uri] => /metro-rail/admin/trains.php
+    [redirect_to] => http://localhost/metro-rail/login.php
+)
+

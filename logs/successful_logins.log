@@ -1,0 +1,119 @@
+2025-05-18 20:23:51 - Login successful
+Array
+(
+    [user_id] => 4
+    [email] => mahmudhs949@gmail.com
+    [role] => user
+    [session] => Array
+        (
+            [last_activity] => 1747599831
+            [user_id] => 4
+            [user_name] => Mahmud Hasan
+            [user_email] => mahmudhs949@gmail.com
+            [user_role] => user
+        )
+
+)
+
+2025-05-18 20:47:11 - Login successful
+Array
+(
+    [user_id] => 4
+    [email] => mahmudhs949@gmail.com
+    [role] => user
+    [session] => Array
+        (
+            [last_activity] => 1747601231
+            [user_id] => 4
+            [user_name] => Mahmud Hasan
+            [user_email] => mahmudhs949@gmail.com
+            [user_role] => user
+        )
+
+)
+
+2025-05-18 21:23:14 - Login successful
+Array
+(
+    [user_id] => 1
+    [email] => admin@metrorail.com
+    [role] => admin
+    [session] => Array
+        (
+            [last_activity] => 1747603394
+            [user_id] => 1
+            [user_name] => Admin User
+            [user_email] => admin@metrorail.com
+            [user_role] => admin
+        )
+
+)
+
+2025-05-19 09:33:45 - Login successful
+Array
+(
+    [user_id] => 1
+    [email] => admin@metrorail.com
+    [role] => admin
+    [session] => Array
+        (
+            [last_activity] => 1747647225
+            [user_id] => 1
+            [user_name] => Admin User
+            [user_email] => admin@metrorail.com
+            [user_role] => admin
+        )
+
+)
+
+2025-05-19 13:53:45 - Login successful
+Array
+(
+    [user_id] => 4
+    [email] => mahmudhs949@gmail.com
+    [role] => user
+    [session] => Array
+        (
+            [last_activity] => 1747662825
+            [user_id] => 4
+            [user_name] => Mahmud Hasan
+            [user_email] => mahmudhs949@gmail.com
+            [user_role] => user
+        )
+
+)
+
+2025-05-19 15:25:41 - Login successful
+Array
+(
+    [user_id] => 1
+    [email] => admin@metrorail.com
+    [role] => admin
+    [session] => Array
+        (
+            [last_activity] => 1747668341
+            [user_id] => 1
+            [user_name] => Admin User
+            [user_email] => admin@metrorail.com
+            [user_role] => admin
+        )
+
+)
+
+2025-05-19 15:31:01 - Login successful
+Array
+(
+    [user_id] => 4
+    [email] => mahmudhs949@gmail.com
+    [role] => user
+    [session] => Array
+        (
+            [last_activity] => 1747668661
+            [user_id] => 4
+            [user_name] => Mahmud Hasan
+            [user_email] => mahmudhs949@gmail.com
+            [user_role] => user
+        )
+
+)
+
